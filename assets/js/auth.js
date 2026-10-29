@@ -1,113 +1,58 @@
-/*
- * SISJAR - Supabase Authentication Adapter
- *
- * Login UI tetap menggunakan USERNAME + PASSWORD seperti aplikasi lama.
- * Supabase Auth sendiri melakukan autentikasi dengan EMAIL + PASSWORD.
- *
- * Untuk akun yang username-nya tidak dapat dicari sebelum login karena RLS,
- * kita gunakan mapping email internal di sisi aplikasi. Jangan pernah menaruh
- * password di file ini.
- *
- * Akun Superadmin existing:
- *   username : superadmin
- *   auth email: admin@sekolah.com
- *
- * Jika nanti akun guru juga ingin login menggunakan username, tambahkan
- * pasangan username -> email Auth pada USERNAME_EMAIL_MAP, atau kita dapat
- * menyiapkan mekanisme autentikasi lain tanpa membuat tabel baru.
- */
+/* SISJAR authentication: UI and credentials are USERNAME + PASSWORD. */
 (function(){
   const sb = () => window.SISJAR_SB;
+  const cfg = () => window.SISJAR_CONFIG || {};
+  const endpoint = () => String(cfg().SUPABASE_URL || '').replace(/\/$/, '') + '/functions/v1/sisjar-auth';
+  const normalizeUsername = v => String(v || '').trim().toLowerCase();
 
-  // Mapping untuk akun yang memang sudah diketahui dari database existing.
-  // Password TIDAK disimpan di sini.
-  const USERNAME_EMAIL_MAP = {
-    superadmin: 'admin@sekolah.com'
-  };
-
-  function normalizeUsername(value) {
-    return String(value || '').trim().toLowerCase();
-  }
-
-  async function resolveLoginEmail(identifier) {
-    const value = String(identifier || '').trim();
-    if (!value) throw new Error('Username dan password wajib diisi.');
-
-    // Jika user mengetik email, langsung gunakan email tersebut.
-    if (value.includes('@')) return value.toLowerCase();
-
-    const username = normalizeUsername(value);
-
-    // Akun yang sudah diketahui dari database existing.
-    if (USERNAME_EMAIL_MAP[username]) {
-      return USERNAME_EMAIL_MAP[username];
-    }
-
-    // Jangan mencoba SELECT profiles sebelum login.
-    // RLS profiles pada database existing memang tidak mengizinkan anonymous
-    // membaca profile orang lain. Karena itu kita tidak melakukan query yang
-    // akan selalu gagal sebelum Auth berhasil.
-    throw new Error(
-      'Username belum memiliki pemetaan login. Untuk sementara gunakan email Auth, atau tambahkan username tersebut ke USERNAME_EMAIL_MAP.'
-    );
+  async function functionCall(payload, token) {
+    const headers = { 'Content-Type':'application/json', 'apikey': cfg().SUPABASE_ANON_KEY || '' };
+    if (token) headers.Authorization = 'Bearer ' + token;
+    const r = await fetch(endpoint(), { method:'POST', headers, body:JSON.stringify(payload) });
+    let data = {};
+    try { data = await r.json(); } catch (_) {}
+    if (!r.ok) throw new Error(data.error || data.message || 'Permintaan autentikasi gagal.');
+    return data;
   }
 
   window.SISJAR_AUTH = {
-    async login(identifier, password) {
-      if (!identifier || !password) {
-        throw new Error('Username dan password wajib diisi.');
-      }
-
-      const email = await resolveLoginEmail(identifier);
-
-      const { data, error } = await sb().auth.signInWithPassword({
-        email,
-        password
-      });
-
-      if (error) {
-        console.error('[SISJAR] Supabase Auth login error:', error);
-        throw new Error('Username atau password salah.');
-      }
-
-      if (!data || !data.session || !data.user) {
-        throw new Error('Login tidak menghasilkan session.');
-      }
-
-      return data.session;
+    async login(username, password) {
+      username = normalizeUsername(username);
+      if (!username || !password) throw new Error('Username dan password wajib diisi.');
+      const data = await functionCall({ action:'login', username, password });
+      if (!data.session || !data.session.access_token) throw new Error('Login tidak menghasilkan session.');
+      const session = data.session;
+      const set = await sb().auth.setSession({ access_token:session.access_token, refresh_token:session.refresh_token });
+      if (set.error) throw set.error;
+      return set.data.session;
     },
-
     async session() {
       const { data, error } = await sb().auth.getSession();
       if (error) throw error;
       return data.session;
     },
-
     async profile() {
-      const { data: userData, error: userError } = await sb().auth.getUser();
+      const { data:userData, error:userError } = await sb().auth.getUser();
       if (userError) throw userError;
-
       const user = userData && userData.user;
       if (!user) return null;
-
-      const { data, error } = await sb()
-        .from('profiles')
-        .select('id, username, role, status, teacher_id, email, phone')
-        .eq('id', user.id)
-        .single();
-
+      const { data, error } = await sb().from('profiles').select('id, username, role, status, teacher_id, email, phone').eq('id', user.id).single();
       if (error) throw error;
       return data;
     },
-
+    async provisionTeacher(data) {
+      const session = await this.session();
+      if (!session) throw new Error('Session Superadmin tidak ditemukan.');
+      return functionCall({ action:'provision_teacher', data }, session.access_token);
+    },
+    async importTeachers(rows) {
+      const session = await this.session();
+      if (!session) throw new Error('Session Superadmin tidak ditemukan.');
+      return functionCall({ action:'import_teachers', rows }, session.access_token);
+    },
     async logout() {
       const { error } = await sb().auth.signOut();
       if (error) throw error;
-    },
-
-    // Dipakai bila nanti perlu menambahkan akun username lain.
-    getUsernameEmailMap() {
-      return { ...USERNAME_EMAIL_MAP };
     }
   };
 })();
