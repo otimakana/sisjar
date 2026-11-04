@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="id">
 <head>
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>SISJAR — Sistem Informasi Mengajar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>SISJAR — Sistem Informasi Mengajar</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js">
-    </script>
-    <style>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js">
+</script>
+<style>
         /* ==============================================================
            ALL STYLES - TIDAK DIUBAH
            ============================================================== */
@@ -1946,10 +1947,11 @@ button,input,select,textarea{font-family:inherit}
   .gm-table-wrap,.card-flat,.gm-ui,.gm-page-hero,.gm-kpi,.gm-schedule-card,.modal-content{box-shadow:none!important;border:1px solid #bbb!important}
 }
 
-</style>
 
 
-<style id="sisjar-ui-final-polish">
+/* ===== merged legacy stylesheet: original order preserved ===== */
+
+
 /* ================================================================
    SISJAR FINAL POLISH — clean application shell
    This layer intentionally neutralizes legacy visual rules.
@@ -2078,8 +2080,11 @@ body{font-size:14px!important}
   .top-header{margin-left:-10px!important;margin-right:-10px!important}
   .gm-att-mobile-card{padding:10px!important}.gm-att-choice{height:40px!important}.gm-att-choice small{font-size:.42rem!important}
 }
-</style>
-<style id="sisjar-final-print-override">
+
+
+/* ===== merged legacy stylesheet: original order preserved ===== */
+
+
 @media print{
   @page{size:A4 portrait;margin:10mm}
   html,body{background:#fff!important}
@@ -2091,14 +2096,11 @@ body{font-size:14px!important}
   body>#sisjarPrintHost thead{display:table-header-group!important}
   body>#sisjarPrintHost tr{break-inside:avoid!important;page-break-inside:avoid!important}
 }
-</style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="assets/js/config.js"></script>
-<script src="assets/js/supabase.js"></script>
-<script src="assets/js/auth.js"></script>
-<script src="assets/js/api.js"></script>
-<script src="assets/js/boot.js"></script>
-<style id="sisjar-harmony-final">
+
+
+/* ===== merged legacy stylesheet: original order preserved ===== */
+
+
 /* SISJAR Harmony Final — one visual language, light/dark aware */
 :root{
   --h-bg:#f3f6fb!important;
@@ -2176,244 +2178,355 @@ body{font-size:14px!important;line-height:1.55!important}
 #loginSection{background:var(--h-bg)!important}.login-card{background:var(--h-surface)!important;border:1px solid var(--h-line)!important;border-radius:22px!important;box-shadow:0 20px 55px rgba(35,62,98,.09)!important;padding:30px!important}.login-brand-mark{background:var(--h-primary-soft)!important;color:var(--h-primary-strong)!important;box-shadow:none!important}.login-card h4{color:var(--h-text)!important}.login-card small,.login-card .text-secondary{color:var(--h-text-2)!important}.btn-login{background:var(--h-primary-strong)!important;border:0!important;border-radius:11px!important;box-shadow:none!important}
 @media(max-width:900px){.main-content{margin-left:0!important;padding:12px 14px 90px!important}.top-header{position:relative!important;top:auto!important;margin:0 -14px 14px!important;border-radius:0 0 16px 16px!important;padding:12px 14px!important}.header-right .header-date{display:none!important}.card-flat{padding:16px!important}.gm-page-hero{padding:18px!important}.gm-kpi-grid{grid-template-columns:repeat(2,1fr)!important}}
 @media(max-width:560px){.main-content{padding-left:10px!important;padding-right:10px!important}.top-header{margin-left:-10px!important;margin-right:-10px!important}.top-header h1{font-size:1.12rem!important}.top-header p{display:none!important}.header-right{gap:5px!important}.header-role{max-width:150px!important;overflow:hidden!important;text-overflow:ellipsis!important;white-space:nowrap!important}.gm-kpi-grid{grid-template-columns:1fr 1fr!important;gap:8px!important}.gm-kpi{padding:13px!important}.gm-kpi strong{font-size:1.25rem!important}.card-flat{padding:14px!important}.gm-page-hero h3{font-size:1.08rem!important}}
+
+
+/* ===== merged legacy stylesheet: original order preserved ===== */
+
+
+/* SISJAR refreshed visual language: calm workspace, consistent rhythm */
+:root{
+  --sx-bg:#f3f6fa;--sx-surface:#ffffff;--sx-surface-soft:#f7f9fc;
+  --sx-text:#17243a;--sx-muted:#65758b;--sx-line:#e3eaf2;
+  --sx-primary:#3478d4;--sx-primary-soft:#eaf2ff;--sx-teal:#269f9b;
+  --sx-shadow:0 8px 28px rgba(31,55,83,.055);
+  --sx-radius:18px;--sx-radius-sm:12px;
+  --sx-gap-1:8px;--sx-gap-2:12px;--sx-gap-3:16px;--sx-gap-4:24px;--sx-gap-5:32px;
+}
+:root[data-theme="dark"]{
+  --sx-bg:#111b27;--sx-surface:#192635;--sx-surface-soft:#1e2d3d;
+  --sx-text:#edf3f9;--sx-muted:#a4b3c3;--sx-line:#2b3b4b;
+  --sx-primary:#80b4ff;--sx-primary-soft:#263d58;--sx-teal:#59c5bc;
+  --sx-shadow:0 10px 28px rgba(0,0,0,.16);
+}
+html,body{background:var(--sx-bg)!important;color:var(--sx-text)!important}
+#mainSection{background:var(--sx-bg)!important}
+#dynamicContent{gap:var(--sx-gap-4)!important;padding:0 0 30px!important}
+#dynamicContent>*{min-width:0}
+#dynamicContent .gm-page-hero{padding:clamp(20px,2.5vw,30px)!important;margin:0 0 2px!important;border-radius:var(--sx-radius)!important;background:var(--sx-surface)!important;border:1px solid var(--sx-line)!important;box-shadow:var(--sx-shadow)!important}
+#dynamicContent .card-flat,#dynamicContent .gm-ui,#dynamicContent .sisjar-settings-section,#dynamicContent .sisjar-settings-card{padding:clamp(18px,2.2vw,26px)!important;margin:0!important;border-radius:var(--sx-radius)!important;background:var(--sx-surface)!important;border:1px solid var(--sx-line)!important;box-shadow:var(--sx-shadow)!important}
+#dynamicContent .gm-page-hero h3{font-size:clamp(1.15rem,2vw,1.55rem)!important;line-height:1.25!important;letter-spacing:-.025em!important;color:var(--sx-text)!important;margin:7px 0 8px!important}
+#dynamicContent .gm-page-hero p{font-size:.88rem!important;line-height:1.65!important;color:var(--sx-muted)!important;max-width:72ch}
+#dynamicContent h5,#dynamicContent h6{color:var(--sx-text)!important;line-height:1.35!important}
+#dynamicContent .form-label{font-size:.8rem!important;font-weight:700!important;color:var(--sx-muted)!important;margin:0 0 8px!important}
+#dynamicContent .form-control,#dynamicContent .form-select{min-height:46px!important;padding:11px 14px!important;border:1px solid var(--sx-line)!important;border-radius:12px!important;background:var(--sx-surface-soft)!important;color:var(--sx-text)!important;box-shadow:none!important}
+#dynamicContent .form-control:focus,#dynamicContent .form-select:focus{border-color:var(--sx-primary)!important;box-shadow:0 0 0 3px color-mix(in srgb,var(--sx-primary) 17%,transparent)!important}
+#dynamicContent .btn{min-height:44px!important;padding:10px 16px!important;border-radius:11px!important;font-size:.82rem!important;font-weight:700!important;line-height:1.25!important;display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:normal}
+#dynamicContent .btn-sm{min-height:40px!important;padding:9px 13px!important}
+#dynamicContent .btn:focus-visible,.mobile-bottom-nav button:focus-visible,.sidebar-link:focus-visible{outline:3px solid color-mix(in srgb,var(--sx-primary) 55%,white)!important;outline-offset:2px!important}
+#dynamicContent .row{--bs-gutter-x:1.1rem!important;--bs-gutter-y:1.1rem!important}
+#dynamicContent .gm-kpi-grid{gap:14px!important;margin:0 0 4px!important}
+#dynamicContent .gm-kpi{padding:18px!important;border-radius:16px!important;background:var(--sx-surface)!important;border:1px solid var(--sx-line)!important;box-shadow:var(--sx-shadow)!important}
+#dynamicContent .gm-kpi span{font-size:.73rem!important;color:var(--sx-muted)!important}
+#dynamicContent .gm-kpi strong{font-size:1.45rem!important;color:var(--sx-text)!important}
+#dynamicContent .gm-schedule-card{height:100%;padding:19px!important;border-radius:16px!important;background:var(--sx-surface-soft)!important;border:1px solid var(--sx-line)!important;box-shadow:none!important;display:flex;flex-direction:column;gap:8px}
+#dynamicContent .gm-schedule-card .time{font-size:.72rem!important;line-height:1.5!important;color:var(--sx-primary)!important;font-weight:800!important;letter-spacing:.015em}
+#dynamicContent .gm-schedule-card h5{font-size:1rem!important;margin:0!important;font-weight:800!important;color:var(--sx-text)!important}
+#dynamicContent .gm-schedule-card>small{font-size:.8rem!important;color:var(--sx-muted)!important}
+#dynamicContent .gm-schedule-actions{display:flex!important;align-items:center!important;flex-wrap:wrap!important;gap:10px!important;margin-top:8px!important}
+#dynamicContent .gm-schedule-actions .btn{min-width:104px!important;min-height:44px!important;margin:0!important}
+#dynamicContent .gm-table-wrap,#dynamicContent .table-responsive{border:1px solid var(--sx-line)!important;border-radius:14px!important;background:var(--sx-surface)!important;overflow:auto!important}
+#dynamicContent .gm-table th,#dynamicContent .table thead th{padding:14px 15px!important;background:var(--sx-surface-soft)!important;color:var(--sx-muted)!important;font-size:.72rem!important;letter-spacing:.035em!important}
+#dynamicContent .gm-table td,#dynamicContent .table tbody td{padding:13px 15px!important;color:var(--sx-text)!important;line-height:1.5!important;border-color:var(--sx-line)!important}
+#dynamicContent .gm-empty{padding:34px 18px!important;color:var(--sx-muted)!important;line-height:1.6!important}
+#dynamicContent .nav-tabs{gap:9px!important;margin:0 0 4px!important;padding-bottom:9px!important}
+#dynamicContent .nav-tabs .nav-link{min-height:42px!important;padding:10px 16px!important;border-radius:11px!important;background:var(--sx-surface)!important;color:var(--sx-muted)!important;border:1px solid var(--sx-line)!important;font-weight:700!important}
+#dynamicContent .nav-tabs .nav-link.active{background:var(--sx-primary-soft)!important;color:var(--sx-primary)!important;border-color:color-mix(in srgb,var(--sx-primary) 28%,var(--sx-line))!important}
+.top-header{background:var(--sx-surface)!important;border:1px solid var(--sx-line)!important;border-radius:18px!important;box-shadow:var(--sx-shadow)!important;margin-bottom:20px!important}
+.sidebar{background:var(--sx-surface)!important;border-color:var(--sx-line)!important}
+.sidebar-link{min-height:46px!important;margin:2px 0!important;padding:11px 13px!important;border-radius:11px!important;font-size:.82rem!important;gap:11px!important}
+.sidebar-label{margin-top:12px!important}
+/* Critical role visibility: beats legacy display:flex!important rules. */
+.role-hidden{display:none!important;visibility:hidden!important;pointer-events:none!important}
+body:not(.sisjar-role-ready) .sidebar .sidebar-link[data-menu],body:not(.sisjar-role-ready) .sidebar .sidebar-link.text-warning{display:none!important}
+.mobile-bottom-nav{min-height:72px!important;padding:8px 10px calc(8px + env(safe-area-inset-bottom))!important;gap:8px!important;background:var(--sx-surface)!important;border:1px solid var(--sx-line)!important;border-radius:18px 18px 0 0!important;box-shadow:0 -8px 26px rgba(20,40,60,.10)!important}
+.mobile-bottom-nav button{min-width:0!important;min-height:52px!important;padding:7px 5px!important;border-radius:12px!important;gap:4px!important;font-size:.7rem!important}
+.mobile-bottom-nav button i{font-size:1.08rem!important}
+.mobile-bottom-nav button.active,.mobile-bottom-nav button.primary-action{background:var(--sx-primary-soft)!important;color:var(--sx-primary)!important}
+.mobile-more-sheet{padding:12px!important;gap:10px!important;background:var(--sx-surface)!important;border:1px solid var(--sx-line)!important;border-radius:18px!important;box-shadow:0 14px 40px rgba(15,35,55,.18)!important}
+.mobile-more-sheet button{min-height:46px!important;padding:11px 14px!important;border-radius:11px!important;display:flex;align-items:center;gap:10px}
+@media(max-width:900px){
+ .main-content{padding:14px 14px calc(104px + env(safe-area-inset-bottom))!important}
+ .top-header{margin:0 0 16px!important}
+}
+@media(max-width:650px){
+ #dynamicContent{gap:16px!important;padding-bottom:18px!important}
+ #dynamicContent .gm-page-hero{padding:19px!important;border-radius:16px!important}
+ #dynamicContent .card-flat,#dynamicContent .gm-ui,#dynamicContent .sisjar-settings-section,#dynamicContent .sisjar-settings-card{padding:17px!important;border-radius:16px!important}
+ #dynamicContent .gm-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+ #dynamicContent .gm-kpi{padding:14px!important;min-height:92px!important}
+ #dynamicContent .gm-schedule-card{padding:17px!important;gap:9px!important}
+ #dynamicContent .gm-schedule-actions{gap:10px!important;margin-top:7px!important}
+ #dynamicContent .gm-schedule-actions .btn{flex:1 1 0;min-width:0!important;min-height:46px!important}
+ #dynamicContent .gm-actionbar{gap:11px!important}
+ #dynamicContent .gm-actionbar .btn{flex:1 1 auto}
+ #dynamicContent .table-responsive,#dynamicContent .gm-table-wrap{border-radius:12px!important}
+ .mobile-bottom-nav{left:8px!important;right:8px!important;bottom:0!important;width:auto!important}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* Report tabs: strictly isolate each report panel; do not expose inactive panes. */
+#dynamicContent .gm-report-tab-content{display:block!important;margin-top:18px!important}
+#dynamicContent .gm-report-tab-content>.tab-pane{display:none!important;visibility:hidden!important;opacity:0!important}
+#dynamicContent .gm-report-tab-content>.tab-pane.active{display:block!important;visibility:visible!important;opacity:1!important}
+#dynamicContent .gm-report-tab-content>.tab-pane.active.show{display:block!important;visibility:visible!important;opacity:1!important}
+#dynamicContent .gm-report-tab-content>.tab-pane:not(.active){height:0!important;overflow:hidden!important}
+#dynamicContent .gm-report-panel{padding:clamp(18px,2.2vw,28px)!important}
+.gm-report-panel-heading{display:flex;align-items:center;gap:15px;padding-bottom:19px;margin-bottom:20px;border-bottom:1px solid var(--sx-line)}
+.gm-report-panel-heading h4{margin:0 0 5px;color:var(--sx-text);font-family:'Space Grotesk',sans-serif;font-size:1.18rem;font-weight:700}
+.gm-report-panel-heading p{margin:0;color:var(--sx-muted);font-size:.88rem;line-height:1.55}
+.gm-report-icon{display:grid;place-items:center;flex:0 0 54px;width:54px;height:54px;border-radius:17px;background:var(--sx-primary-soft);color:var(--sx-primary);font-size:1.35rem}
+.gm-report-date-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:18px}
+.gm-report-date-grid>div{min-width:0}
+.gm-report-filter-row{margin-top:0!important;padding-top:17px;border-top:1px solid var(--sx-line)}
+.gm-report-result{margin-top:22px}
+.gm-report-result:empty{display:none}
+.gm-report-tabs{margin-bottom:0!important}
+.gm-report-tabs .nav-link{gap:5px}
+@media(max-width:600px){.gm-report-date-grid{grid-template-columns:1fr;gap:12px}.gm-report-panel-heading{align-items:flex-start}.gm-report-icon{flex-basis:46px;width:46px;height:46px;border-radius:14px}}
+
+
+/* Typography pairing: Space Grotesk for hierarchy, Inter for reading/UI. */
+html,body,#mainSection,#dynamicContent,button,input,select,textarea{
+  font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important;
+}
+#dynamicContent h1,#dynamicContent h2,#dynamicContent h3,#dynamicContent h4,
+#dynamicContent h5,#dynamicContent h6,
+#dynamicContent .gm-page-hero>span,
+#dynamicContent .gm-kpi strong,
+#dynamicContent .dashboard-kpi strong{
+  font-family:'Space Grotesk','Inter',sans-serif!important;
+}
+
 </style>
-</head>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/supabase.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/boot.js"></script>
+
+
+</link></head>
 <body>
-
-    <div id="toast-container"></div>
-    <div id="loading-overlay">
-        <div class="spinner"></div>
-        <p class="loading-text" id="loading-text">Memuat data...</p>
-    </div>
-
-    <!-- ============================================================
+<div id="toast-container"></div>
+<div id="loading-overlay">
+<div class="spinner"></div>
+<p class="loading-text" id="loading-text">Memuat data...</p>
+</div>
+<!-- ============================================================
          LOGIN SECTION
          ============================================================ -->
-    <div id="loginSection">
-        <div class="login-card">
-            <div class="brand text-center">
-                <div class="login-brand-mark"><i class="bi bi-journal-bookmark-fill"></i></div>
-                <h4>SISJAR</h4>
-                <small>Sistem Informasi Mengajar</small>
-            </div>
-            <form onsubmit="event.preventDefault(); handleLogin();">
-                <div class="mb-3">
-                    <label class="form-label fw-bold small text-uppercase" style="color:#64748b;">Username</label>
-                    <input type="text" id="username" class="form-control" placeholder="Masukkan username" autofocus />
-                </div>
-                <div class="mb-3">
-                    <label class="form-label fw-bold small text-uppercase" style="color:#64748b;">Password</label>
-                    <input type="password" id="password" class="form-control" placeholder="Masukkan password" />
-                </div>
-                <div id="loginAlert" class="alert login-alert d-none" role="alert"></div>
-                <button type="submit" class="btn-login" id="loginBtn">
-                    <span id="loginSpinner" class="spinner-border spinner-border-sm d-none me-2"></span>
-                    <i class="bi bi-box-arrow-in-right me-1"></i> Masuk
+<div id="loginSection">
+<div class="login-card">
+<div class="brand text-center">
+<div class="login-brand-mark"><i class="bi bi-journal-bookmark-fill"></i></div>
+<h4>SISJAR</h4>
+<small>Sistem Informasi Mengajar</small>
+</div>
+<form onsubmit="event.preventDefault(); handleLogin();">
+<div class="mb-3">
+<label class="form-label fw-bold small text-uppercase" style="color:#64748b;">Username</label>
+<input autofocus="" class="form-control" id="username" placeholder="Masukkan username" type="text"/>
+</div>
+<div class="mb-3">
+<label class="form-label fw-bold small text-uppercase" style="color:#64748b;">Password</label>
+<input class="form-control" id="password" placeholder="Masukkan password" type="password"/>
+</div>
+<div class="alert login-alert d-none" id="loginAlert" role="alert"></div>
+<button class="btn-login" id="loginBtn" type="submit">
+<span class="spinner-border spinner-border-sm d-none me-2" id="loginSpinner"></span>
+<i class="bi bi-box-arrow-in-right me-1"></i> Masuk
                 </button>
-            </form>
-            <p class="text-center text-secondary small mt-3 fw-bold" style="color:#94a3b8 !important;">
-                <i class="bi bi-info-circle"></i> Sistem Informasi Mengajar • akun demo tersedia di lingkungan pengujian
+</form>
+<p class="text-center text-secondary small mt-3 fw-bold" style="color:#94a3b8 !important;">
+<i class="bi bi-info-circle"></i> Sistem Informasi Mengajar • akun demo tersedia di lingkungan pengujian
             </p>
-        </div>
-    </div>
-
-    <!-- ============================================================
+</div>
+</div>
+<!-- ============================================================
          MAIN APP
          ============================================================ -->
-    <div id="mainSection" style="display:none;">
-
-        <!-- SIDEBAR -->
-        <aside class="sidebar no-print" id="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-copy">
-                    <strong id="brandAppName">SISJAR</strong>
-                    <span id="brandSchoolName">Sistem Informasi Mengajar</span>
-                </div>
-            </div>
-
-            <div class="sidebar-user">
-                <div class="avatar-user"><i class="bi bi-person-fill"></i></div>
-                <div>
-                    <small>LOGIN SEBAGAI</small>
-                    <strong id="userBadge">-</strong>
-                </div>
-            </div>
-
-            <div id="superRoleBox" class="super-role-box" style="display:none">
-                <div class="super-role-title"><i class="bi bi-shuffle"></i><span>MODE PENGECEKAN</span></div>
-                <div class="super-role-row">
-                    <select id="superRoleSelect" class="form-select form-select-sm" onchange="handleSuperRoleChange(this.value)">
-                        <option value="superadmin">Superadmin</option>
-                    </select>
-                </div>
-                <small id="superRoleHint">Superadmin dapat menguji tampilan dan alur guru.</small>
-            </div>
-
-            <div class="sidebar-label">MENU UTAMA</div>
-            <nav class="sidebar-nav">
-                <a href="#" class="sidebar-link active" data-menu="dashboard" onclick="switchMenu('dashboard'); return false;">
-                    <i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span>
-                </a>
-                <a href="#" class="sidebar-link teacher-menu gm-only" data-menu="guruJadwal" onclick="switchMenu('guruJadwal'); return false;">
-                    <i class="bi bi-calendar2-week-fill"></i><span>Jadwal Mengajar</span>
-                </a>
-                <a href="#" class="sidebar-link teacher-menu gm-only" data-menu="guruAbsensi" onclick="switchMenu('guruAbsensi'); return false;">
-                    <i class="bi bi-person-check-fill"></i><span>Absensi Mapel</span>
-                </a>
-                <a href="#" class="sidebar-link teacher-menu gm-only" data-menu="guruJurnal" onclick="switchMenu('guruJurnal'); return false;">
-                    <i class="bi bi-journal-text"></i><span>Jurnal Mengajar</span>
-                </a>
-                <a href="#" class="sidebar-link teacher-menu gm-only" data-menu="guruNilai" onclick="switchMenu('guruNilai'); return false;">
-                    <i class="bi bi-clipboard-data-fill"></i><span>Penilaian & Nilai</span>
-                </a>
-                <a href="#" class="sidebar-link teacher-menu gm-only" data-menu="guruLaporan" onclick="switchMenu('guruLaporan'); return false;">
-                    <i class="bi bi-file-earmark-bar-graph-fill"></i><span>Laporan Guru</span>
-                </a>
-                <a href="#" class="sidebar-link admin-teacher-menu gm-only" data-menu="guruAdmin" onclick="switchMenu('guruAdmin'); return false;">
-                    <i class="bi bi-person-workspace"></i><span>Guru & Jadwal</span>
-                </a>
-                <a href="#" class="sidebar-link admin-settings-menu gm-only" data-menu="pengaturan" onclick="switchMenu('pengaturan'); return false;">
-                    <i class="bi bi-sliders2"></i><span>Pengaturan Identitas</span>
-                </a>
-                <a href="#" class="sidebar-link" data-menu="siswa" onclick="switchMenu('siswa'); return false;">
-                    <i class="bi bi-clipboard2-check-fill"></i><span>Kehadiran Siswa</span>
-                </a>
-                <a href="#" class="sidebar-link" data-menu="dataSiswa" onclick="switchMenu('dataSiswa'); return false;">
-                    <i class="bi bi-people-fill"></i><span>Data Siswa</span>
-                </a>
-                <a href="#" class="sidebar-link" data-menu="terlambat" onclick="switchMenu('terlambat'); return false;">
-                    <i class="bi bi-alarm-fill"></i><span>Terlambat</span>
-                </a>
-                <a href="#" class="sidebar-link" data-menu="kelas" onclick="switchMenu('kelas'); return false;">
-                    <i class="bi bi-collection-fill"></i><span>Data Kelas</span>
-                </a>
-                <a href="#" class="sidebar-link" data-menu="libur" onclick="switchMenu('libur'); return false;">
-                    <i class="bi bi-calendar2-x-fill"></i><span>Kalender Libur</span>
-                </a>
-                <a href="#" class="sidebar-link text-warning" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                    <i class="bi bi-cloud-arrow-up-fill"></i><span>Upload Data</span>
-                </a>
-                <a href="#" class="sidebar-link" data-menu="backup" onclick="switchMenu('backup'); return false;">
-                    <i class="bi bi-database-fill-gear"></i><span>Backup & Restore</span>
-                </a>
-            </nav>
-
-            <div class="sidebar-bottom">
-                <div class="sidebar-info"><i class="bi bi-shield-check-fill"></i><span>Data tersimpan di Supabase</span></div>
-                <a href="#" class="sidebar-link logout-link" onclick="logout(); return false;">
-                    <i class="bi bi-box-arrow-right"></i><span>Keluar</span>
-                </a>
-                <div class="sidebar-footer">SISJAR • Sistem Informasi Mengajar</div>
-            </div>
-        </aside>
-
-        <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar(false)"></div>
-
-        <nav class="mobile-bottom-nav no-print" id="mobileBottomNav" aria-label="Navigasi cepat">
-            <button type="button" data-bottom-menu="dashboard" onclick="switchMenu('dashboard')"><i class="bi bi-grid-1x2-fill"></i><span class="bottom-label">Beranda</span></button>
-            <button type="button" data-bottom-menu="guruAbsensi" class="primary-action" onclick="switchMenu('guruAbsensi')"><i class="bi bi-person-check-fill"></i><span class="bottom-label">Absensi</span></button>
-            <button type="button" data-bottom-menu="guruJurnal" onclick="switchMenu('guruJurnal')"><i class="bi bi-journal-text"></i><span class="bottom-label">Jurnal</span></button>
-            <button type="button" class="bottom-menu-more" onclick="toggleMobileMore()"><i class="bi bi-grid"></i><span class="bottom-label">Lainnya</span></button>
-        </nav>
-        <div class="mobile-more-sheet no-print" id="mobileMoreSheet">
-            <button data-role-menu="guruNilai" onclick="switchMenu('guruNilai');toggleMobileMore(false)"><i class="bi bi-clipboard-data-fill"></i>Penilaian & Nilai</button>
-            <button data-role-menu="guruJadwal" onclick="switchMenu('guruJadwal');toggleMobileMore(false)"><i class="bi bi-calendar2-week-fill"></i>Jadwal Mengajar</button>
-            <button data-role-menu="guruLaporan" onclick="switchMenu('guruLaporan');toggleMobileMore(false)"><i class="bi bi-file-earmark-bar-graph-fill"></i>Laporan</button>
-            <button onclick="toggleSidebar(true);toggleMobileMore(false)"><i class="bi bi-list"></i>Menu Lengkap</button>
-        </div>
-
-        <!-- MAIN CONTENT -->
-        <main class="main-content" id="mainContent">
-            <header class="top-header no-print">
-                <div class="header-left">
-                    <button class="hamburger-btn" onclick="toggleSidebar()" aria-label="Buka/tutup menu">
-                        <i class="bi bi-list"></i>
-                    </button>
-                    <div>
-                        <div class="header-kicker" id="pageEyebrow">RINGKASAN KEHADIRAN</div>
-                        <h1 id="pageTitle">Dashboard</h1>
-                        <p id="pageSubtitle">Pantau kondisi kehadiran siswa secara ringkas dan cepat.</p>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" aria-label="Ganti tema">
-                        <i class="bi bi-moon-stars-fill" id="themeToggleIcon"></i><span id="themeToggleText">Gelap</span>
-                    </button>
-                    <div class="header-date"><i class="bi bi-calendar3"></i><span id="todayLabel">-</span></div>
-                    <div class="header-role" id="userBadgeTop">-</div>
-                </div>
-            </header>
-            <div id="dynamicContent"></div>
-        </main>
-    </div>
-
-    <!-- ============================================================
+<div id="mainSection" style="display:none;">
+<!-- SIDEBAR -->
+<aside class="sidebar no-print" id="sidebar">
+<div class="sidebar-brand">
+<div class="brand-copy">
+<strong id="brandAppName">SISJAR</strong>
+<span id="brandSchoolName">Sistem Informasi Mengajar</span>
+</div>
+</div>
+<div class="sidebar-user">
+<div class="avatar-user"><i class="bi bi-person-fill"></i></div>
+<div>
+<small>LOGIN SEBAGAI</small>
+<strong id="userBadge">-</strong>
+</div>
+</div>
+<div class="super-role-box" id="superRoleBox" style="display:none">
+<div class="super-role-title"><i class="bi bi-shuffle"></i><span>MODE PENGECEKAN</span></div>
+<div class="super-role-row">
+<select class="form-select form-select-sm" id="superRoleSelect" onchange="handleSuperRoleChange(this.value)">
+<option value="superadmin">Superadmin</option>
+</select>
+</div>
+<small id="superRoleHint">Superadmin dapat menguji tampilan dan alur guru.</small>
+</div>
+<div class="sidebar-label">MENU UTAMA</div>
+<nav class="sidebar-nav">
+<a class="sidebar-link active" data-menu="dashboard" href="#" onclick="switchMenu('dashboard'); return false;">
+<i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span>
+</a>
+<a class="sidebar-link teacher-menu gm-only" data-menu="guruJadwal" href="#" onclick="switchMenu('guruJadwal'); return false;">
+<i class="bi bi-calendar2-week-fill"></i><span>Jadwal Mengajar</span>
+</a>
+<a class="sidebar-link teacher-menu gm-only" data-menu="guruAbsensi" href="#" onclick="switchMenu('guruAbsensi'); return false;">
+<i class="bi bi-person-check-fill"></i><span>Absensi Mapel</span>
+</a>
+<a class="sidebar-link teacher-menu gm-only" data-menu="guruJurnal" href="#" onclick="switchMenu('guruJurnal'); return false;">
+<i class="bi bi-journal-text"></i><span>Jurnal Mengajar</span>
+</a>
+<a class="sidebar-link teacher-menu gm-only" data-menu="guruNilai" href="#" onclick="switchMenu('guruNilai'); return false;">
+<i class="bi bi-clipboard-data-fill"></i><span>Penilaian &amp; Nilai</span>
+</a>
+<a class="sidebar-link teacher-menu gm-only" data-menu="guruLaporan" href="#" onclick="switchMenu('guruLaporan'); return false;">
+<i class="bi bi-file-earmark-bar-graph-fill"></i><span>Laporan Guru</span>
+</a>
+<a class="sidebar-link admin-teacher-menu gm-only" data-menu="guruAdmin" href="#" onclick="switchMenu('guruAdmin'); return false;">
+<i class="bi bi-person-workspace"></i><span>Guru &amp; Jadwal</span>
+</a>
+<a class="sidebar-link admin-settings-menu gm-only" data-menu="pengaturan" href="#" onclick="switchMenu('pengaturan'); return false;">
+<i class="bi bi-sliders2"></i><span>Pengaturan Identitas</span>
+</a>
+<a class="sidebar-link" data-menu="siswa" href="#" onclick="switchMenu('siswa'); return false;">
+<i class="bi bi-clipboard2-check-fill"></i><span>Kehadiran Siswa</span>
+</a>
+<a class="sidebar-link" data-menu="dataSiswa" href="#" onclick="switchMenu('dataSiswa'); return false;">
+<i class="bi bi-people-fill"></i><span>Data Siswa</span>
+</a>
+<a class="sidebar-link" data-menu="terlambat" href="#" onclick="switchMenu('terlambat'); return false;">
+<i class="bi bi-alarm-fill"></i><span>Terlambat</span>
+</a>
+<a class="sidebar-link" data-menu="kelas" href="#" onclick="switchMenu('kelas'); return false;">
+<i class="bi bi-collection-fill"></i><span>Data Kelas</span>
+</a>
+<a class="sidebar-link" data-menu="libur" href="#" onclick="switchMenu('libur'); return false;">
+<i class="bi bi-calendar2-x-fill"></i><span>Kalender Libur</span>
+</a>
+<a class="sidebar-link text-warning" data-bs-target="#uploadModal" data-bs-toggle="modal" href="#">
+<i class="bi bi-cloud-arrow-up-fill"></i><span>Upload Data</span>
+</a>
+<a class="sidebar-link" data-menu="backup" href="#" onclick="switchMenu('backup'); return false;">
+<i class="bi bi-database-fill-gear"></i><span>Backup &amp; Restore</span>
+</a>
+</nav>
+<div class="sidebar-bottom">
+<div class="sidebar-info"><i class="bi bi-shield-check-fill"></i><span>Data tersimpan di Supabase</span></div>
+<a class="sidebar-link logout-link" href="#" onclick="logout(); return false;">
+<i class="bi bi-box-arrow-right"></i><span>Keluar</span>
+</a>
+<div class="sidebar-footer">SISJAR • Sistem Informasi Mengajar</div>
+</div>
+</aside>
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar(false)"></div>
+<nav aria-label="Navigasi cepat" class="mobile-bottom-nav no-print" id="mobileBottomNav">
+<button data-bottom-menu="dashboard" onclick="switchMenu('dashboard')" type="button"><i class="bi bi-grid-1x2-fill"></i><span class="bottom-label">Beranda</span></button>
+<button class="primary-action" data-bottom-menu="guruAbsensi" onclick="switchMenu('guruAbsensi')" type="button"><i class="bi bi-person-check-fill"></i><span class="bottom-label">Absensi</span></button>
+<button data-bottom-menu="guruJurnal" onclick="switchMenu('guruJurnal')" type="button"><i class="bi bi-journal-text"></i><span class="bottom-label">Jurnal</span></button>
+<button class="bottom-menu-more" onclick="toggleMobileMore()" type="button"><i class="bi bi-grid"></i><span class="bottom-label">Lainnya</span></button>
+</nav>
+<div class="mobile-more-sheet no-print" id="mobileMoreSheet">
+<button data-role-menu="guruNilai" onclick="switchMenu('guruNilai');toggleMobileMore(false)"><i class="bi bi-clipboard-data-fill"></i>Penilaian &amp; Nilai</button>
+<button data-role-menu="guruJadwal" onclick="switchMenu('guruJadwal');toggleMobileMore(false)"><i class="bi bi-calendar2-week-fill"></i>Jadwal Mengajar</button>
+<button data-role-menu="guruLaporan" onclick="switchMenu('guruLaporan');toggleMobileMore(false)"><i class="bi bi-file-earmark-bar-graph-fill"></i>Laporan</button>
+<button onclick="toggleSidebar(true);toggleMobileMore(false)"><i class="bi bi-list"></i>Menu Lengkap</button>
+</div>
+<!-- MAIN CONTENT -->
+<main class="main-content" id="mainContent">
+<header class="top-header no-print">
+<div class="header-left">
+<button aria-label="Buka/tutup menu" class="hamburger-btn" onclick="toggleSidebar()">
+<i class="bi bi-list"></i>
+</button>
+<div>
+<div class="header-kicker" id="pageEyebrow">RINGKASAN KEHADIRAN</div>
+<h1 id="pageTitle">Dashboard</h1>
+<p id="pageSubtitle">Pantau kondisi kehadiran siswa secara ringkas dan cepat.</p>
+</div>
+</div>
+<div class="header-right">
+<button aria-label="Ganti tema" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" type="button">
+<i class="bi bi-moon-stars-fill" id="themeToggleIcon"></i><span id="themeToggleText">Gelap</span>
+</button>
+<div class="header-date"><i class="bi bi-calendar3"></i><span id="todayLabel">-</span></div>
+<div class="header-role" id="userBadgeTop">-</div>
+</div>
+</header>
+<div id="dynamicContent"></div>
+</main>
+</div>
+<!-- ============================================================
          MODAL UPLOAD
          ============================================================ -->
-    <div class="modal fade sisjar-upload-modal" id="uploadModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content sisjar-upload-card">
-                <div class="sisjar-upload-head">
-                    <div class="sisjar-upload-title-wrap">
-                        <div class="sisjar-upload-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
-                        <div>
-                            <div class="sisjar-upload-eyebrow">DATA SISWA</div>
-                            <h5 class="sisjar-upload-title">Upload Data</h5>
-                            <p>Impor data siswa dari file Excel dengan format yang sudah disediakan.</p>
-                        </div>
-                    </div>
-                    <button type="button" class="sisjar-upload-close" data-bs-dismiss="modal" aria-label="Tutup">
-                        <i class="bi bi-x-lg"></i>
-                    </button>
-                </div>
-
-                <div class="sisjar-upload-body">
-                    <div class="sisjar-upload-info">
-                        <div class="sisjar-upload-info-icon"><i class="bi bi-info-circle-fill"></i></div>
-                        <div>
-                            <strong>Format kolom</strong>
-                            <span>NIS &nbsp;•&nbsp; Nama_Siswa &nbsp;•&nbsp; Kelas &nbsp;•&nbsp; Email_Ortu</span>
-                        </div>
-                    </div>
-
-                    <div class="sisjar-upload-actions">
-                        <div>
-                            <div class="sisjar-upload-section-label">1. Siapkan file</div>
-                            <p>Gunakan template agar nama kolom dan format data sesuai dengan sistem.</p>
-                        </div>
-                        <button onclick="downloadTemplate('siswa')" class="sisjar-template-btn">
-                            <i class="bi bi-file-earmark-spreadsheet-fill"></i>
-                            <span>Download Template</span>
-                            <i class="bi bi-download sisjar-template-arrow"></i>
-                        </button>
-                    </div>
-
-                    <div class="sisjar-upload-section-label">2. Pilih file Excel</div>
-                    <label class="sisjar-dropzone" for="fileSiswa">
-                        <input type="file" id="fileSiswa" accept=".xls,.xlsx" onchange="updateSiswaFileName(this)">
-                        <span class="sisjar-drop-icon"><i class="bi bi-file-earmark-arrow-up"></i></span>
-                        <strong>Pilih file Excel</strong>
-                        <span>Format .xlsx atau .xls · Maksimal sesuai ketentuan sistem</span>
-                        <span id="siswaFileName" class="sisjar-selected-file">Belum ada file dipilih</span>
-                    </label>
-
-                    <div id="uploadAlertSiswa" class="sisjar-upload-alert d-none"></div>
-                </div>
-
-                <div class="sisjar-upload-footer">
-                    <button type="button" class="sisjar-cancel-btn" data-bs-dismiss="modal">Batal</button>
-                    <button type="button" class="sisjar-upload-btn" onclick="processUpload('siswa')">
-                        <i class="bi bi-cloud-arrow-up-fill"></i>
+<div aria-hidden="true" class="modal fade sisjar-upload-modal" id="uploadModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content sisjar-upload-card">
+<div class="sisjar-upload-head">
+<div class="sisjar-upload-title-wrap">
+<div class="sisjar-upload-icon"><i class="bi bi-cloud-arrow-up-fill"></i></div>
+<div>
+<div class="sisjar-upload-eyebrow">DATA SISWA</div>
+<h5 class="sisjar-upload-title">Upload Data</h5>
+<p>Impor data siswa dari file Excel dengan format yang sudah disediakan.</p>
+</div>
+</div>
+<button aria-label="Tutup" class="sisjar-upload-close" data-bs-dismiss="modal" type="button">
+<i class="bi bi-x-lg"></i>
+</button>
+</div>
+<div class="sisjar-upload-body">
+<div class="sisjar-upload-info">
+<div class="sisjar-upload-info-icon"><i class="bi bi-info-circle-fill"></i></div>
+<div>
+<strong>Format kolom</strong>
+<span>NIS  •  Nama_Siswa  •  Kelas  •  Email_Ortu</span>
+</div>
+</div>
+<div class="sisjar-upload-actions">
+<div>
+<div class="sisjar-upload-section-label">1. Siapkan file</div>
+<p>Gunakan template agar nama kolom dan format data sesuai dengan sistem.</p>
+</div>
+<button class="sisjar-template-btn" onclick="downloadTemplate('siswa')">
+<i class="bi bi-file-earmark-spreadsheet-fill"></i>
+<span>Download Template</span>
+<i class="bi bi-download sisjar-template-arrow"></i>
+</button>
+</div>
+<div class="sisjar-upload-section-label">2. Pilih file Excel</div>
+<label class="sisjar-dropzone" for="fileSiswa">
+<input accept=".xls,.xlsx" id="fileSiswa" onchange="updateSiswaFileName(this)" type="file"/>
+<span class="sisjar-drop-icon"><i class="bi bi-file-earmark-arrow-up"></i></span>
+<strong>Pilih file Excel</strong>
+<span>Format .xlsx atau .xls · Maksimal sesuai ketentuan sistem</span>
+<span class="sisjar-selected-file" id="siswaFileName">Belum ada file dipilih</span>
+</label>
+<div class="sisjar-upload-alert d-none" id="uploadAlertSiswa"></div>
+</div>
+<div class="sisjar-upload-footer">
+<button class="sisjar-cancel-btn" data-bs-dismiss="modal" type="button">Batal</button>
+<button class="sisjar-upload-btn" onclick="processUpload('siswa')" type="button">
+<i class="bi bi-cloud-arrow-up-fill"></i>
                         Upload Data Siswa
                     </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-    <script>
+</div>
+</div>
+</div>
+</div>
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+<script>
     // ==============================================================
     // NATIVE UI COMPATIBILITY — menggantikan kebutuhan Bootstrap JS
     // ==============================================================
@@ -2769,45 +2882,68 @@ body{font-size:14px!important;line-height:1.55!important}
 
     function applyRoleMenu(role){
         role=String(role||'').trim().toLowerCase();
+        if(!['guru','piket','superadmin'].includes(role)) role='';
         document.body.classList.add('sisjar-role-ready');
+        document.body.dataset.userRole=role;
 
-        // Reset seluruh menu sensitif sebelum role diketahui. Main app baru
-        // dibuka setelah profile Supabase berhasil diverifikasi.
-        document.querySelectorAll('.sidebar-link[data-menu], .sidebar-link.text-warning, .teacher-menu, .admin-teacher-menu, .admin-settings-menu').forEach(function(el){
-            el.style.display='none';
+        // Gunakan class dengan display:none!important agar aturan CSS lama
+        // yang memakai display:flex!important tidak dapat memunculkan menu lintas-role.
+        var sidebarItems=document.querySelectorAll('.sidebar-link[data-menu], .sidebar-link.text-warning, .teacher-menu, .admin-teacher-menu, .admin-settings-menu');
+        sidebarItems.forEach(function(el){
+            el.classList.add('role-hidden');
             el.classList.remove('disabled');
         });
 
-        var dash=document.querySelector('.sidebar-link[data-menu="dashboard"]');
-        if(dash)dash.style.display='flex';
-
+        function showMenu(selector){
+            document.querySelectorAll(selector).forEach(function(el){el.classList.remove('role-hidden');});
+        }
+        showMenu('.sidebar-link[data-menu="dashboard"]');
         if(role==='guru'){
-            document.querySelectorAll('.teacher-menu').forEach(function(el){el.style.display='flex';});
+            showMenu('.sidebar-link.teacher-menu:not(.admin-teacher-menu):not(.admin-settings-menu)');
         } else if(role==='piket'){
-            ['siswa','terlambat'].forEach(function(m){
-                var el=document.querySelector('.sidebar-link[data-menu="'+m+'"]');
-                if(el)el.style.display='flex';
-            });
+            showMenu('.sidebar-link[data-menu="siswa"], .sidebar-link[data-menu="terlambat"]');
         } else if(role==='superadmin'){
-            document.querySelectorAll('.teacher-menu,.admin-teacher-menu,.admin-settings-menu').forEach(function(el){el.style.display='flex';});
-            ['siswa','dataSiswa','terlambat','kelas','libur','backup'].forEach(function(m){
-                var el=document.querySelector('.sidebar-link[data-menu="'+m+'"]');
-                if(el)el.style.display='flex';
-            });
-            var up=document.querySelector('.sidebar-link.text-warning');
-            if(up)up.style.display='flex';
+            showMenu('.sidebar-link.teacher-menu, .sidebar-link.admin-teacher-menu, .sidebar-link.admin-settings-menu');
+            showMenu('.sidebar-link[data-menu="siswa"], .sidebar-link[data-menu="dataSiswa"], .sidebar-link[data-menu="terlambat"], .sidebar-link[data-menu="kelas"], .sidebar-link[data-menu="libur"], .sidebar-link[data-menu="backup"], .sidebar-link.text-warning');
         }
 
-        document.querySelectorAll('[data-bottom-menu]').forEach(function(el){
-            var m=el.getAttribute('data-bottom-menu');
-            var show=(m==='dashboard') || (role==='guru' && ['guruAbsensi','guruJurnal'].includes(m));
-            el.style.display=show?'flex':'none';
+        // Bottom navigation memakai tiga pintasan yang relevan dengan role.
+        var bottom=document.querySelectorAll('#mobileBottomNav [data-bottom-menu]');
+        var map={
+          guru:[['dashboard','Beranda','bi-grid-1x2-fill'],['guruAbsensi','Absensi','bi-person-check-fill'],['guruJurnal','Jurnal','bi-journal-text']],
+          piket:[['dashboard','Beranda','bi-grid-1x2-fill'],['siswa','Kehadiran','bi-clipboard2-check-fill'],['terlambat','Terlambat','bi-alarm-fill']],
+          superadmin:[['dashboard','Beranda','bi-grid-1x2-fill'],['siswa','Kehadiran','bi-clipboard2-check-fill'],['dataSiswa','Data Siswa','bi-people-fill']]
+        };
+        var items=map[role]||map.guru;
+        bottom.forEach(function(el,i){
+            var item=items[i];
+            if(!item){el.classList.add('role-hidden');return;}
+            el.classList.remove('role-hidden');
+            el.setAttribute('data-bottom-menu',item[0]);
+            var icon=el.querySelector('i'),label=el.querySelector('.bottom-label');
+            if(icon)icon.className='bi '+item[2];
+            if(label)label.textContent=item[1];
+            el.classList.toggle('primary-action',i===1);
         });
+
+        // Sheet tambahan hanya memuat pintasan guru. Untuk Piket/Superadmin,
+        // menu lengkap tetap dibuka dari sidebar yang sudah difilter.
         document.querySelectorAll('#mobileMoreSheet button[data-role-menu]').forEach(function(el){
             var m=el.getAttribute('data-role-menu');
-            var show=(role==='superadmin') || (role==='guru' && ['guruNilai','guruJadwal','guruLaporan'].includes(m));
-            el.style.display=show?'flex':'none';
+            var visible=role==='guru' && ['guruNilai','guruJadwal','guruLaporan'].includes(m);
+            el.classList.toggle('role-hidden',!visible);
         });
+        var fullMenuBtn=document.querySelector('#mobileMoreSheet button:not([data-role-menu])');
+        if(fullMenuBtn) fullMenuBtn.classList.toggle('role-hidden',!['guru','piket','superadmin'].includes(role));
+        var more=document.querySelector('#mobileBottomNav .bottom-menu-more');
+        if(more)more.classList.toggle('role-hidden',!['guru','piket','superadmin'].includes(role));
+
+        // Bersihkan active state yang mungkin berasal dari role sebelumnya.
+        var active=document.querySelector('.sidebar-link.active[data-menu]');
+        if(active && active.classList.contains('role-hidden')){
+            document.querySelectorAll('.sidebar-link.active').forEach(function(el){el.classList.remove('active');});
+            var dash=document.querySelector('.sidebar-link[data-menu="dashboard"]');if(dash)dash.classList.add('active');
+        }
     }
 
     function canAccessMenu(menu){
@@ -4997,7 +5133,7 @@ body{font-size:14px!important;line-height:1.55!important}
     }
     function renderGuruDashboard(c){
       c.innerHTML='<div class="gm-ui gm-page-hero"><span class="toolbar-label">RUANG KERJA GURU</span><h3>Mengajar dengan Hati, Membangun Masa Depan</h3><p>Kelola jadwal, absensi, jurnal, dan penilaian dalam satu sistem terintegrasi. pilih kelas yang aktif, isi absensi, lanjutkan jurnal, lalu kelola penilaian.</p></div><div class="gm-kpi-grid"><div class="gm-kpi"><span>Jadwal Hari Ini</span><strong id="gmDashCount">0</strong></div><div class="gm-kpi"><span>Kelas yang Diajar</span><strong id="gmDashClass">0</strong></div><div class="gm-kpi"><span>Penilaian</span><strong id="gmDashAssessment">0</strong></div><div class="gm-kpi"><span>Status Sistem</span><strong style="font-size:1rem">Aktif</strong></div></div><div class="card-flat"><div class="d-flex justify-content-between align-items-center mb-3"><div><h6 class="fw-bold mb-1">Jadwal Hari Ini</h6><small class="text-secondary">Hanya jadwal milik akun guru yang sedang login.</small></div><button class="btn btn-primary btn-sm" onclick="switchMenu(&#39;guruAbsensi&#39;)"><i class="bi bi-person-check me-1"></i> Isi Absensi</button></div><div id="gmDashSchedules" class="row g-3"><div class="gm-empty">Memuat jadwal...</div></div></div>';
-      gmCall('gmGetMySchedules',[getCredential(),gmToday()],function(res){if(!res.success){document.getElementById('gmDashSchedules').innerHTML='<div class="gm-empty text-danger">'+gmEsc(res.message)+'</div>';return;}gmState.schedules=res.data||[];document.getElementById('gmDashCount').textContent=gmState.schedules.length;var cls=new Set(gmState.schedules.map(x=>x.idKelas));document.getElementById('gmDashClass').textContent=cls.size;document.getElementById('gmDashSchedules').innerHTML=gmState.schedules.length?gmState.schedules.map(function(x){return '<div class="col-md-6 col-xl-4"><div class="gm-schedule-card"><div class="time">JAM KE-'+gmEsc(x.jamKe)+' • '+gmJam(x.jamMulai)+'–'+gmJam(x.jamSelesai)+'</div><h5>'+gmEsc(x.mapel)+'</h5><small>'+gmEsc(x.kelas)+'</small><div class="mt-3"><button class="btn btn-primary btn-sm" onclick="openGuruAttendance(\''+gmEsc(x.id)+'\')"><i class="bi bi-check2-circle me-1"></i>Absensi</button><button class="btn btn-outline-secondary btn-sm ms-1" onclick="openGuruJournal(\''+gmEsc(x.id)+'\')"><i class="bi bi-journal-text me-1"></i>Jurnal</button></div></div></div>';}).join(''):'<div class="gm-empty">Tidak ada jadwal hari ini.</div>';},function(e){document.getElementById('gmDashSchedules').innerHTML='<div class="gm-empty text-danger">'+gmEsc(e.message)+'</div>';});
+      gmCall('gmGetMySchedules',[getCredential(),gmToday()],function(res){if(!res.success){document.getElementById('gmDashSchedules').innerHTML='<div class="gm-empty text-danger">'+gmEsc(res.message)+'</div>';return;}gmState.schedules=res.data||[];document.getElementById('gmDashCount').textContent=gmState.schedules.length;var cls=new Set(gmState.schedules.map(x=>x.idKelas));document.getElementById('gmDashClass').textContent=cls.size;document.getElementById('gmDashSchedules').innerHTML=gmState.schedules.length?gmState.schedules.map(function(x){return '<div class="col-md-6 col-xl-4"><div class="gm-schedule-card"><div class="time">JAM KE-'+gmEsc(x.jamKe)+' • '+gmJam(x.jamMulai)+'–'+gmJam(x.jamSelesai)+'</div><h5>'+gmEsc(x.mapel)+'</h5><small>'+gmEsc(x.kelas)+'</small><div class="gm-schedule-actions"><button class="btn btn-primary" onclick="openGuruAttendance(\''+gmEsc(x.id)+'\')"><i class="bi bi-check2-circle me-1"></i>Absensi</button><button class="btn btn-outline-secondary" onclick="openGuruJournal(\''+gmEsc(x.id)+'\')"><i class="bi bi-journal-text me-1"></i>Jurnal</button></div></div></div>';}).join(''):'<div class="gm-empty">Tidak ada jadwal hari ini.</div>';},function(e){document.getElementById('gmDashSchedules').innerHTML='<div class="gm-empty text-danger">'+gmEsc(e.message)+'</div>';});
       gmCall('gmGetAssessmentTypes',[getCredential(),'',''],function(r){if(r.success)document.getElementById('gmDashAssessment').textContent=(r.data||[]).length;});
     }
     function renderGuruSchedule(c){c.innerHTML='<div class="gm-page-hero"><span>JADWAL MENGAJAR</span><h3>Jadwal Anda</h3><p>Jika satu kelas diajar lebih dari satu hari, setiap hari tampil sebagai jadwal tersendiri.</p></div><div class="card-flat"><div class="gm-actionbar mb-3"><div class="grow"><label class="form-label">Tanggal</label><input id="gmJadwalTanggal" type="date" class="form-control" value="'+gmToday()+'"></div><button class="btn btn-primary" onclick="loadGuruSchedule()"><i class="bi bi-search me-1"></i>Tampilkan</button><button class="btn btn-outline-secondary" onclick="document.getElementById(\'gmJadwalTanggal\').value=gmToday();loadGuruSchedule()"><i class="bi bi-calendar-day me-1"></i>Hari Ini</button></div><div id="gmScheduleList"><div class="gm-empty">Memuat...</div></div></div>';document.getElementById('gmJadwalTanggal').addEventListener('change',loadGuruSchedule);loadGuruSchedule();}
@@ -5149,11 +5285,54 @@ body{font-size:14px!important;line-height:1.55!important}
     function saveGuruScores(){if(gmState.scoreBatchBundle)return saveGuruScoresBatch();var items=Array.from(document.querySelectorAll('.gm-score')).map(x=>({idSiswa:x.dataset.id,nilai:x.value,catatan:document.querySelector('.gm-score-note[data-id="'+x.dataset.id+'"]').value||''}));gmCall('gmSaveScores',[gmState.scoreBundle.assessment.id,items,getCredential()],function(r){showToast(r.message,r.success?'success':'error');if(r.success)editGuruScores(gmState.scoreBundle.assessment.id);});}
     function saveGuruScoresBatch(){var b=gmState.scoreBatchBundle;if(!b||!b.assessments)return showToast('Data penilaian belum dimuat.','error');var payload=b.assessments.map(function(a){return {idPenilaian:a.id,items:b.students.map(function(s){var el=document.querySelector('.gm-batch-score[data-aid="'+CSS.escape(a.id)+'"][data-sid="'+CSS.escape(s.id)+'"]');return {idSiswa:s.id,nilai:el?el.value:''};})};});var btn=document.getElementById('gmScoreSaveBtn');if(btn){btn.disabled=true;btn.innerHTML='<i class="bi bi-hourglass-split me-1"></i>Menyimpan...';}gmCall('gmSaveScoresBatch',[payload,getCredential()],function(r){if(btn){btn.disabled=false;btn.innerHTML='<i class="bi bi-save me-1"></i>Simpan Nilai';}showToast(r.message,r.success?'success':'error');if(r.success){editGuruScoresBatch();}});}
     function renderGuruReports(c){
-      c.innerHTML='<div class="gm-page-hero"><span>LAPORAN GURU</span><h3>Export & Cetak</h3><p>Pilih kelas, mata pelajaran, lalu pilih penilaian yang ingin ditampilkan. Nilai Akhir dihitung dari penilaian yang dipilih.</p></div><ul class="nav nav-tabs mb-3"><li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#gmRepAtt">Absensi</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#gmRepGrade">Nilai</button></li><li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#gmRepJrn">Jurnal</button></li></ul><div class="tab-content"><div class="tab-pane fade show active" id="gmRepAtt"><div class="card-flat"><div class="row g-2 align-items-end"><div class="col-md-3"><label class="form-label">Mulai</label><input id="gmRepAttStart" type="date" class="form-control"></div><div class="col-md-3"><label class="form-label">Selesai</label><input id="gmRepAttEnd" type="date" class="form-control"></div><div class="col-md-3"><label class="form-label">Kelas</label><select id="gmRepAttClass" class="form-select"><option value="SEMUA">Semua Kelas</option></select></div><div class="col-md-3"><button class="btn btn-primary w-100" onclick="loadGuruAttendanceReport()">Tampilkan</button></div></div><div class="mt-3" id="gmRepAttBody"></div></div></div><div class="tab-pane fade" id="gmRepGrade"><div class="card-flat"><div class="row g-2 align-items-end"><div class="col-md-4"><label class="form-label">Kelas</label><select id="gmRepGradeClass" class="form-select"><option value="SEMUA">Semua Kelas</option></select></div><div class="col-md-4"><label class="form-label">Mata Pelajaran</label><select id="gmRepGradeMapel" class="form-select"><option value="SEMUA">Semua Mata Pelajaran</option></select></div><div class="col-md-4"><button class="btn btn-primary w-100" onclick="loadGuruGradeReport()"><i class="bi bi-grid-3x3-gap me-1"></i>Tampilkan Data</button></div></div><div id="gmGradeReportAssessments" class="mt-3"></div><div class="mt-3" id="gmRepGradeBody"></div></div></div><div class="tab-pane fade" id="gmRepJrn"><div class="card-flat"><div class="row g-2 align-items-end"><div class="col-md-3"><label class="form-label">Mulai</label><input id="gmRepJrnStart" type="date" class="form-control"></div><div class="col-md-3"><label class="form-label">Selesai</label><input id="gmRepJrnEnd" type="date" class="form-control"></div><div class="col-md-3"><label class="form-label">Kelas</label><select id="gmRepJrnClass" class="form-select"><option value="SEMUA">Semua Kelas</option></select></div><div class="col-md-3"><button class="btn btn-primary w-100" onclick="loadGuruJournalReport()">Tampilkan</button></div></div><div class="mt-3" id="gmRepJrnBody"></div></div></div></div><div id="gmReportPrint" class="gm-print-area"></div>';
-      var now=gmToday(),first=new Date();first.setDate(1);var f=first.toISOString().slice(0,10);
-      ['gmRepAttStart','gmRepJrnStart'].forEach(function(id){document.getElementById(id).value=f;});
-      ['gmRepAttEnd','gmRepJrnEnd'].forEach(function(id){document.getElementById(id).value=now;});
+      var now=gmToday(),first=new Date();first.setDate(1);
+      var firstDay=first.getFullYear()+'-'+String(first.getMonth()+1).padStart(2,'0')+'-'+String(first.getDate()).padStart(2,'0');
+      function dateFields(prefix){
+        return '<div class="gm-report-date-grid">'+
+          '<div><label class="form-label" for="'+prefix+'Start">Tanggal Mulai</label><input id="'+prefix+'Start" type="date" class="form-control" value="'+firstDay+'"></div>'+
+          '<div><label class="form-label" for="'+prefix+'End">Tanggal Selesai</label><input id="'+prefix+'End" type="date" class="form-control" value="'+now+'"></div>'+
+        '</div>';
+      }
+      c.innerHTML=
+        '<div class="gm-page-hero"><span>LAPORAN GURU</span><h3>Rekapitulasi & Cetak</h3><p>Pilih jenis laporan melalui tab. Filter dan hasil hanya ditampilkan pada tab yang sedang dibuka.</p></div>'+
+        '<ul class="nav nav-tabs gm-report-tabs" role="tablist">'+
+          '<li class="nav-item" role="presentation"><button class="nav-link active" type="button" role="tab" aria-selected="true" data-bs-toggle="tab" data-bs-target="#gmRepAtt"><i class="bi bi-person-check me-2"></i>Absensi</button></li>'+
+          '<li class="nav-item" role="presentation"><button class="nav-link" type="button" role="tab" aria-selected="false" data-bs-toggle="tab" data-bs-target="#gmRepGrade"><i class="bi bi-clipboard-data me-2"></i>Nilai</button></li>'+
+          '<li class="nav-item" role="presentation"><button class="nav-link" type="button" role="tab" aria-selected="false" data-bs-toggle="tab" data-bs-target="#gmRepJrn"><i class="bi bi-journal-text me-2"></i>Jurnal</button></li>'+
+        '</ul>'+
+        '<div class="tab-content gm-report-tab-content">'+
+          '<section class="tab-pane fade show active" id="gmRepAtt" role="tabpanel">'+
+            '<div class="card-flat gm-report-panel"><div class="gm-report-panel-heading"><span class="gm-report-icon"><i class="bi bi-person-check"></i></span><div><h4>Laporan Absensi</h4><p>Atur kelas dan periode, lalu tampilkan rekap kehadiran siswa.</p></div></div>'+
+            dateFields('gmRepAtt')+
+            '<div class="row g-3 align-items-end gm-report-filter-row"><div class="col-md-8"><label class="form-label" for="gmRepAttClass">Kelas</label><select id="gmRepAttClass" class="form-select"><option value="SEMUA">Semua Kelas</option></select></div><div class="col-md-4"><button class="btn btn-primary w-100" type="button" onclick="loadGuruAttendanceReport()"><i class="bi bi-eye me-1"></i>Tampilkan Absensi</button></div></div>'+
+            '<div class="gm-report-result" id="gmRepAttBody"><div class="gm-empty">Pilih periode dan kelas, lalu klik Tampilkan Absensi.</div></div></div>'+
+          '</section>'+
+          '<section class="tab-pane fade" id="gmRepGrade" role="tabpanel">'+
+            '<div class="card-flat gm-report-panel"><div class="gm-report-panel-heading"><span class="gm-report-icon"><i class="bi bi-clipboard-data"></i></span><div><h4>Laporan Nilai</h4><p>Pilih kelas, mata pelajaran, dan periode penilaian yang ingin direkap.</p></div></div>'+
+            dateFields('gmRepGrade')+
+            '<div class="row g-3 align-items-end gm-report-filter-row"><div class="col-md-4"><label class="form-label" for="gmRepGradeClass">Kelas</label><select id="gmRepGradeClass" class="form-select"><option value="SEMUA">Semua Kelas</option></select></div><div class="col-md-4"><label class="form-label" for="gmRepGradeMapel">Mata Pelajaran</label><select id="gmRepGradeMapel" class="form-select"><option value="SEMUA">Semua Mata Pelajaran</option></select></div><div class="col-md-4"><button class="btn btn-primary w-100" type="button" onclick="loadGuruGradeReport()"><i class="bi bi-grid-3x3-gap me-1"></i>Tampilkan Nilai</button></div></div>'+
+            '<div id="gmGradeReportAssessments" class="gm-report-result"></div><div class="gm-report-result" id="gmRepGradeBody"></div></div>'+
+          '</section>'+
+          '<section class="tab-pane fade" id="gmRepJrn" role="tabpanel">'+
+            '<div class="card-flat gm-report-panel"><div class="gm-report-panel-heading"><span class="gm-report-icon"><i class="bi bi-journal-text"></i></span><div><h4>Laporan Jurnal</h4><p>Pilih kelas dan periode untuk melihat jurnal pembelajaran.</p></div></div>'+
+            dateFields('gmRepJrn')+
+            '<div class="row g-3 align-items-end gm-report-filter-row"><div class="col-md-8"><label class="form-label" for="gmRepJrnClass">Kelas</label><select id="gmRepJrnClass" class="form-select"><option value="SEMUA">Semua Kelas</option></select></div><div class="col-md-4"><button class="btn btn-primary w-100" type="button" onclick="loadGuruJournalReport()"><i class="bi bi-journal-check me-1"></i>Tampilkan Jurnal</button></div></div>'+
+            '<div class="gm-report-result" id="gmRepJrnBody"><div class="gm-empty">Pilih periode dan kelas, lalu klik Tampilkan Jurnal.</div></div></div>'+
+          '</section>'+
+        '</div><div id="gmReportPrint" class="gm-print-area"></div>';
+
+      gmState.reportAtt=null;gmState.reportAttSummary=null;gmState.reportJournal=null;
       gmState.reportGrade=null;gmState.reportGradeAssessments=[];gmState.reportGradeStudents=[];gmState.reportGradeSelected=[];gmState.reportGradeRows=[];gmState.reportGradeMatrix=null;
+      ['gmRepAtt','gmRepGrade','gmRepJrn'].forEach(function(prefix){
+        [prefix+'Start',prefix+'End'].forEach(function(id){
+          var el=document.getElementById(id);
+          if(el)el.addEventListener('change',function(){
+            if(prefix==='gmRepAtt'){gmState.reportAtt=null;gmState.reportAttSummary=null;var b=document.getElementById('gmRepAttBody');if(b)b.innerHTML='<div class="gm-empty">Periode berubah. Klik Tampilkan Absensi untuk memuat ulang.</div>';}
+            if(prefix==='gmRepGrade'){clearGuruGradeReportSelection();}
+            if(prefix==='gmRepJrn'){gmState.reportJournal=null;var b=document.getElementById('gmRepJrnBody');if(b)b.innerHTML='<div class="gm-empty">Periode berubah. Klik Tampilkan Jurnal untuk memuat ulang.</div>';}
+          });
+        });
+      });
       gmCall('gmGetMyClasses',[getCredential()],function(r){
         var classes=r.data||[];
         var opts=classes.map(function(x){return '<option value="'+gmEsc(x.idKelas)+'">'+gmEsc(x.nama)+'</option>';}).join('');
@@ -5163,6 +5342,13 @@ body{font-size:14px!important;line-height:1.55!important}
         var gc=document.getElementById('gmRepGradeClass');if(gc)gc.addEventListener('change',function(){populateGuruGradeMapelOptions();clearGuruGradeReportSelection();});
         var gm=document.getElementById('gmRepGradeMapel');if(gm)gm.addEventListener('change',clearGuruGradeReportSelection);
       });
+    }
+    function getGuruReportDateRange(kind){
+      var prefix=kind==='grade'?'gmRepGrade':(kind==='journal'?'gmRepJrn':'gmRepAtt');
+      var a=document.getElementById(prefix+'Start')?.value||'',b=document.getElementById(prefix+'End')?.value||'';
+      if(!a||!b){showToast('Pilih tanggal mulai dan selesai terlebih dahulu.','error');return null;}
+      if(a>b){showToast('Tanggal mulai tidak boleh melebihi tanggal selesai.','error');return null;}
+      return {start:a,end:b};
     }
     function populateGuruGradeMapelOptions(){
       var sel=document.getElementById('gmRepGradeMapel');if(!sel)return;
@@ -5187,8 +5373,7 @@ body{font-size:14px!important;line-height:1.55!important}
     function updateGuruGradeReportSelection(){renderGuruGradeReportMatrix();}
 function gmReportButtons(type){return '<div class="d-flex gap-2 flex-wrap mt-2"><button class="btn btn-success btn-sm" onclick="exportGuruReport(\''+type+'\')"><i class="bi bi-file-earmark-excel me-1"></i>Excel</button><button class="btn btn-danger btn-sm" onclick="printGuruReport(\''+type+'\')"><i class="bi bi-printer me-1"></i>PDF / Cetak</button></div>';}
     function loadGuruAttendanceReport(){
-      var a=document.getElementById('gmRepAttStart').value,b=document.getElementById('gmRepAttEnd').value,k=document.getElementById('gmRepAttClass').value;
-      if(!a||!b)return showToast('Pilih rentang tanggal terlebih dahulu.','error');
+      var range=getGuruReportDateRange('att');if(!range)return;var a=range.start,b=range.end,k=document.getElementById('gmRepAttClass').value;
       gmCall('gmGetAttendanceReport',[getCredential(),a,b,k,'SEMUA'],function(r){
         gmState.reportAtt=r.data||[];
         gmCall('gmGetAttendanceSummaryReport',[getCredential(),a,b,k],function(sr){
@@ -5217,6 +5402,20 @@ function gmReportButtons(type){return '<div class="d-flex gap-2 flex-wrap mt-2">
         });
       });
     }
+    function loadGuruJournalReport(){
+      var range=getGuruReportDateRange('journal');if(!range)return;
+      var k=document.getElementById('gmRepJrnClass')?.value||'SEMUA',body=document.getElementById('gmRepJrnBody');
+      if(body)body.innerHTML='<div class="gm-empty"><span class="spinner-border spinner-border-sm me-2"></span>Memuat laporan jurnal...</div>';
+      gmCall('gmGetJournalReport',[getCredential(),range.start,range.end,k],function(r){
+        if(!r||!r.success){if(body)body.innerHTML='<div class="gm-empty text-danger">'+gmEsc(r?.message||'Gagal memuat laporan jurnal.')+'</div>';return;}
+        gmState.reportJournal=r.data||[];
+        if(!body)return;
+        var rows=gmState.reportJournal;
+        if(!rows.length){body.innerHTML='<div class="gm-empty"><i class="bi bi-journal-x"></i><div class="fw-bold mt-2">Belum ada jurnal pada periode ini.</div><div>Periksa rentang tanggal atau pilihan kelas.</div></div>';return;}
+        body.innerHTML='<div class="gm-report-period-line"><i class="bi bi-calendar3 me-2"></i>Periode '+gmEsc(gmDate(range.start))+' – '+gmEsc(gmDate(range.end))+' <span>•</span> '+rows.length+' jurnal</div><div class="gm-table-wrap"><table class="gm-table"><thead><tr><th>No</th><th>Tanggal</th><th>Jam</th><th>Kelas</th><th>Mata Pelajaran</th><th>H</th><th>S</th><th>I</th><th>A</th><th>Materi</th><th>Catatan</th></tr></thead><tbody>'+rows.map(function(x,i){return '<tr><td>'+(i+1)+'</td><td>'+gmEsc(gmDate(x.tanggal))+'</td><td>'+gmEsc(x.jamKe||'-')+'</td><td><strong>'+gmEsc(x.kelas||x.idKelas||'-')+'</strong></td><td>'+gmEsc(x.mapel||'-')+'</td><td>'+Number(x.hadir||0)+'</td><td>'+Number(x.sakit||0)+'</td><td>'+Number(x.izin||0)+'</td><td>'+Number(x.alfa||0)+'</td><td class="gm-report-text-cell">'+gmEsc(x.materi||'—')+'</td><td class="gm-report-text-cell">'+gmEsc(x.catatanMingguDepan||x.catatanKelas||'—')+'</td></tr>';}).join('')+'</tbody></table></div>'+gmReportButtons('journal');
+      });
+    }
+
     function gmBuildGradeGroups(r){
       var assessments=r.penilaian||[], students=r.students||[], rows=r.data||[], scoreMap={};
       rows.forEach(function(x){var key=String(x.idPenilaian)+'|'+String(x.idSiswa||x.nis||'');scoreMap[key]=x.nilai;});
@@ -5234,12 +5433,13 @@ function gmReportButtons(type){return '<div class="d-flex gap-2 flex-wrap mt-2">
     }
 
     function loadGuruGradeReport(){
+      var range=getGuruReportDateRange('grade');if(!range)return;
       var k=document.getElementById('gmRepGradeClass').value;
       var m=document.getElementById('gmRepGradeMapel').value;
       var body=document.getElementById('gmRepGradeBody'),pick=document.getElementById('gmGradeReportAssessments');
       if(body)body.innerHTML='<div class="gm-empty">Memuat rekap nilai...</div>';
       if(pick)pick.innerHTML='';
-      gmCall('gmGetScoreReport',[getCredential(),k,m==='SEMUA'?'':m],function(r){
+      gmCall('gmGetScoreReport',[getCredential(),k,m==='SEMUA'?'':m,range.start,range.end],function(r){
         if(!r.success){if(body)body.innerHTML='<div class="gm-empty text-danger">'+gmEsc(r.message||'Gagal memuat laporan.')+'</div>';return;}
         gmState.reportGrade=r.data||[];gmState.reportGradeAssessments=r.penilaian||[];gmState.reportGradeStudents=r.students||[];gmState.reportGradeRows=r.data||[];gmState.reportGradeSelected=(r.penilaian||[]).map(function(a){return String(a.id);});gmState.reportGradeMatrix=null;
         if(!gmState.reportGradeAssessments.length){if(body)body.innerHTML='<div class="gm-empty"><i class="bi bi-table"></i><div class="mt-2">Belum ada penilaian untuk filter ini.</div></div>';return;}
@@ -5342,7 +5542,7 @@ function exportGuruReport(type){
       if(type==='grade'&&!gmGetSelectedGradeAssessments().length)return showToast('Pilih minimal satu nilai yang akan ditampilkan.','error');
       gmCall('gmGetPrintIdentity',[getCredential()],function(ir){
         var x=ir.data||{},kopTitle='SISJAR — Sistem Informasi Mengajar',kopSub='',kopAddr='',title=type==='att'?'REKAP ABSENSI MATA PELAJARAN':type==='grade'?'LAPORAN HASIL PENILAIAN':'JURNAL MENGAJAR';
-        var html='<div class="gm-print-doc gm-a4"><div class="gm-print-kop"><div class="kop-title">'+gmEsc(kopTitle)+'</div><div class="kop-sub">'+gmEsc(kopSub)+'</div><div class="kop-addr">'+gmEsc(kopAddr)+'</div></div><div class="gm-print-head"><h3>'+title+'</h3><div class="meta">Guru: <strong>'+gmEsc(x.guru||'')+'</strong>'+(x.nipGuru?' • NIP: '+gmEsc(x.nipGuru):'')+(type==='att'?' • Periode: '+gmEsc(gmDate(data.periode.mulai))+' s.d. '+gmEsc(gmDate(data.periode.selesai)):'')+'</div></div>';
+        var html='<div class="gm-print-doc gm-a4"><div class="gm-print-kop"><div class="kop-title">'+gmEsc(kopTitle)+'</div><div class="kop-sub">'+gmEsc(kopSub)+'</div><div class="kop-addr">'+gmEsc(kopAddr)+'</div></div><div class="gm-print-head"><h3>'+title+'</h3><div class="meta">Guru: <strong>'+gmEsc(x.guru||'')+'</strong>'+(x.nipGuru?' • NIP: '+gmEsc(x.nipGuru):'')+((type==='att'||type==='journal')?' • Periode: '+gmEsc(gmDate(document.getElementById('gmRepStart')?.value||''))+' s.d. '+gmEsc(gmDate(document.getElementById('gmRepEnd')?.value||'')):'')+'</div></div>';
         if(type==='att'){
           var o=data.overall||{};html+='<div class="att-print-summary"><div><b>Pertemuan Efektif</b><strong>'+Number(o.pertemuanEfektif||0)+'</strong></div><div><b>Total Kesempatan</b><strong>'+Number(o.totalKesempatan||0)+'</strong></div><div><b>Hadir</b><strong>'+Number(o.hadir||0)+'</strong></div><div><b>Terlambat</b><strong>'+Number(o.terlambat||0)+'</strong></div><div><b>Sakit</b><strong>'+Number(o.sakit||0)+'</strong></div><div><b>Izin</b><strong>'+Number(o.izin||0)+'</strong></div><div><b>Alfa</b><strong>'+Number(o.alfa||0)+'</strong></div><div><b>% Kehadiran</b><strong>'+Number(o.persenKehadiran||0).toFixed(2)+'%</strong></div></div>';
           html+='<table class="attendance-print-table"><thead><tr><th>No</th><th>Kelas</th><th>Mata Pelajaran</th><th>NIS</th><th>Nama Siswa</th><th>Pertemuan Ef.</th><th>Total Kesempatan</th><th>H</th><th>T</th><th>S</th><th>I</th><th>A</th><th>%</th></tr></thead><tbody>'+(data.data||[]).map(function(r,i){return '<tr><td>'+(i+1)+'</td><td>'+gmEsc(r.kelas)+'</td><td>'+gmEsc(r.mapel)+'</td><td>'+gmEsc(r.nis)+'</td><td>'+gmEsc(r.nama)+'</td><td>'+r.pertemuanEfektif+'</td><td>'+r.totalKesempatan+'</td><td>'+r.hadir+'</td><td>'+r.terlambat+'</td><td>'+r.sakit+'</td><td>'+r.izin+'</td><td>'+r.alfa+'</td><td><b>'+Number(r.persenKehadiran||0).toFixed(2)+'%</b></td></tr>';}).join('')+'</tbody></table>';
@@ -5370,13 +5570,17 @@ var appSettings={};
       loadAppSettingsUI(function(){var x=appSettings||{};c.innerHTML='<div class="gm-page-hero"><span>IDENTITAS & DOKUMEN</span><h3>Pengaturan SISJAR</h3><p>Identitas ini digunakan pada tampilan aplikasi dan otomatis dicantumkan saat laporan dicetak atau diekspor.</p></div><div class="sisjar-settings-card"><div class="sisjar-settings-section mb-3"><div class="sisjar-settings-title mb-3"><i class="bi bi-building me-2 text-primary"></i>Identitas Aplikasi & Sekolah</div><div class="row g-3"><div class="col-md-4"><label class="form-label">Nama Aplikasi</label><input id="setNamaAplikasi" class="form-control" value="'+gmEsc(x.NAMA_APLIKASI||'SISJAR')+'"></div><div class="col-md-8"><label class="form-label">Subjudul Aplikasi</label><input id="setSubjudul" class="form-control" value="'+gmEsc(x.SUBJUDUL_APLIKASI||'Sistem Informasi Mengajar')+'"></div><div class="col-md-6"><label class="form-label">Nama Sekolah</label><input id="setNamaSekolah" class="form-control" value="'+gmEsc(x.NAMA_SEKOLAH||'')+'"></div><div class="col-md-6"><label class="form-label">Alamat Sekolah</label><input id="setAlamatSekolah" class="form-control" value="'+gmEsc(x.ALAMAT_SEKOLAH||'')+'"></div><div class="col-md-4"><label class="form-label">Tahun Ajaran</label><input id="setTahunAjaran" class="form-control" value="'+gmEsc(x.TAHUN_AJARAN||'')+'"></div><div class="col-md-4"><label class="form-label">Semester</label><select id="setSemester" class="form-select"><option '+(x.SEMESTER==='Ganjil'?'selected':'')+'>Ganjil</option><option '+(x.SEMESTER==='Genap'?'selected':'')+'>Genap</option></select></div><div class="col-md-4"><label class="form-label">Tagline</label><input id="setTagline" class="form-control" value="'+gmEsc(x.TAGLINE||'')+'"></div></div></div><div class="sisjar-settings-section mb-3"><div class="sisjar-settings-title mb-3"><i class="bi bi-person-badge me-2 text-primary"></i>Identitas Guru</div><div class="row g-3"><div class="col-md-7"><label class="form-label">Nama Guru</label><input id="setNamaGuru" class="form-control" value="'+gmEsc(x.NAMA_GURU||'')+'"></div><div class="col-md-5"><label class="form-label">NIP Guru</label><input id="setNipGuru" class="form-control" value="'+gmEsc(x.NIP_GURU||'')+'"></div></div></div><div class="sisjar-settings-section sisjar-sign-card mb-3"><div class="sisjar-settings-title mb-3"><i class="bi bi-pen me-2 text-primary"></i>Identitas Kepala Sekolah</div><div class="row g-3"><div class="col-md-7"><label class="form-label">Nama Kepala Sekolah</label><input id="setNamaKepala" class="form-control" value="'+gmEsc(x.NAMA_KEPALA_SEKOLAH||'')+'"></div><div class="col-md-5"><label class="form-label">NIP Kepala Sekolah</label><input id="setNipKepala" class="form-control" value="'+gmEsc(x.NIP_KEPALA_SEKOLAH||'')+'"></div></div></div><div class="sisjar-settings-section sisjar-print-header-settings mb-3"><div class="sisjar-settings-title mb-3"><i class="bi bi-layout-text-window-reverse me-2 text-primary"></i>Kop / Header Cetak Manual</div><div class="row g-3"><div class="col-md-6"><label class="form-label">Judul Kop</label><input id="setKopJudul" class="form-control" value="'+gmEsc(x.KOP_JUDUL||'')+'" placeholder="Contoh: NAMA SEKOLAH"></div><div class="col-md-6"><label class="form-label">Subjudul Kop</label><input id="setKopSubjudul" class="form-control" value="'+gmEsc(x.KOP_SUBJUDUL||'')+'" placeholder="Contoh: PROGRAM KEAHLIAN..."></div><div class="col-12"><label class="form-label">Alamat / Kontak Kop</label><textarea id="setKopAlamat" class="form-control" rows="2" placeholder="Alamat, telepon, email, website, dll.">'+gmEsc(x.KOP_ALAMAT||'')+'</textarea></div><div class="col-12"><label class="form-label">Footer Cetak</label><input id="setKopFooter" class="form-control" value="'+gmEsc(x.KOP_FOOTER||'')+'" placeholder="Teks tambahan di bawah dokumen"></div></div><div class="gm-print-a4-note mt-2"><i class="bi bi-file-earmark"></i> Cetakan laporan menggunakan ukuran kertas A4 secara default.</div></div><div class="d-flex justify-content-end gap-2"><button class="btn btn-outline-secondary" onclick="renderAppSettings(document.getElementById(\'dynamicContent\'))">Batal</button><button class="btn btn-primary px-4" onclick="saveAppSettings()"><i class="bi bi-check2-circle me-1"></i>Simpan Pengaturan</button></div><div class="sisjar-preview mt-4"><div class="app">'+gmEsc(x.NAMA_APLIKASI||'SISJAR')+' — '+gmEsc(x.SUBJUDUL_APLIKASI||'Sistem Informasi Mengajar')+'</div><div class="school">'+gmEsc(x.NAMA_SEKOLAH||'Nama Sekolah')+'</div><div class="meta">'+gmEsc(x.ALAMAT_SEKOLAH||'Alamat sekolah')+'</div><div class="sign"><div>Mengetahui,<br>Kepala Sekolah<strong>'+gmEsc(x.NAMA_KEPALA_SEKOLAH||'Nama Kepala Sekolah')+'</strong><small>'+(x.NIP_KEPALA_SEKOLAH?'NIP. '+gmEsc(x.NIP_KEPALA_SEKOLAH):'')+'</small></div><div>Guru Mata Pelajaran<strong>'+gmEsc(x.NAMA_GURU||'Nama Guru')+'</strong><small>'+(x.NIP_GURU?'NIP. '+gmEsc(x.NIP_GURU):'')+'</small></div></div></div></div>';
     });}
     function saveAppSettings(){var data={NAMA_APLIKASI:document.getElementById('setNamaAplikasi').value,SUBJUDUL_APLIKASI:document.getElementById('setSubjudul').value,NAMA_SEKOLAH:document.getElementById('setNamaSekolah').value,ALAMAT_SEKOLAH:document.getElementById('setAlamatSekolah').value,TAHUN_AJARAN:document.getElementById('setTahunAjaran').value,SEMESTER:document.getElementById('setSemester').value,TAGLINE:document.getElementById('setTagline').value,NAMA_GURU:document.getElementById('setNamaGuru').value,NIP_GURU:document.getElementById('setNipGuru').value,NAMA_KEPALA_SEKOLAH:document.getElementById('setNamaKepala').value,NIP_KEPALA_SEKOLAH:document.getElementById('setNipKepala').value,KOP_JUDUL:document.getElementById('setKopJudul').value,KOP_SUBJUDUL:document.getElementById('setKopSubjudul').value,KOP_ALAMAT:document.getElementById('setKopAlamat').value,KOP_FOOTER:document.getElementById('setKopFooter').value};gmCall('gmAdminSaveAppSettings',[data,getCredential()],function(r){showToast(r.message,r.success?'success':'error');if(r.success){appSettings=r.data||data;loadAppSettingsUI();}});}
-    function renderGuruAdmin(c){if(getUserRoleLocal()!=='superadmin'){c.innerHTML='<div class="gm-empty text-danger"><i class="bi bi-shield-x"></i><div class="fw-bold">Akses ditolak</div></div>';return;}c.innerHTML='<div class="gm-page-hero"><span>ADMINISTRASI</span><h3>Guru, Jadwal & WhatsApp Kelas</h3><p>Kelola akun guru dengan cepat. Login menggunakan username dan password.</p></div><div class="row g-3"><div class="col-lg-5"><div class="card-flat gm-admin-account-card"><div class="gm-admin-card-head"><div><div class="gm-admin-kicker">AKUN PENGGUNA</div><h6 class="gm-admin-title">Tambah Guru</h6><p class="gm-admin-subtitle">Isi data dasar. Email Auth dibuat otomatis oleh sistem.</p></div><span class="gm-admin-icon"><i class="bi bi-person-plus-fill"></i></span></div><div class="gm-admin-form"><div class="gm-form-field"><label for="gmAdmGuruUsername">Username</label><div class="gm-input-wrap"><i class="bi bi-at"></i><input id="gmAdmGuruUsername" class="form-control" autocomplete="off" placeholder="contoh: ahmad"></div><small>Dipakai saat login.</small></div><div class="gm-form-field"><label for="gmAdmGuruNama">Nama Lengkap</label><div class="gm-input-wrap"><i class="bi bi-person"></i><input id="gmAdmGuruNama" class="form-control" autocomplete="name" placeholder="Nama guru"></div></div><div class="gm-form-grid"><div class="gm-form-field"><label for="gmAdmGuruWA">WhatsApp</label><div class="gm-input-wrap"><i class="bi bi-whatsapp"></i><input id="gmAdmGuruWA" class="form-control" inputmode="tel" placeholder="62812xxxxxxx"></div></div><div class="gm-form-field"><label for="gmAdmGuruRole">Role</label><select id="gmAdmGuruRole" class="form-select"><option value="guru">Guru</option><option value="piket">Piket</option><option value="superadmin">Superadmin</option></select></div></div><div class="gm-form-field"><label for="gmAdmGuruPassword">Password</label><div class="gm-input-wrap gm-password-wrap"><i class="bi bi-key"></i><input id="gmAdmGuruPassword" type="password" class="form-control" value="guru123!" autocomplete="new-password"><button type="button" class="gm-password-toggle" onclick="toggleGuruPassword()" aria-label="Tampilkan password"><i class="bi bi-eye"></i></button></div><small>Password awal: <strong>guru123!</strong>. Bisa diganti sebelum disimpan.</small></div></div><button class="btn btn-primary gm-save-account-btn" onclick="saveGuruAdmin()"><i class="bi bi-person-check-fill"></i><span>Simpan Akun Guru</span></button><div class="gm-admin-security"><i class="bi bi-shield-check"></i><span>Password tidak disimpan sebagai teks biasa di database. Sistem menggunakan Supabase Auth.</span></div><div class="gm-admin-divider"><span>ATAU IMPORT EXCEL</span></div><div class="gm-import-box"><div><strong>Import banyak guru sekaligus</strong><small>Username, Nama, WhatsApp, Role, Password. Email boleh dikosongkan.</small></div><label class="gm-file-btn"><i class="bi bi-file-earmark-spreadsheet"></i><span>Pilih Excel</span><input id="gmAdmGuruExcel" type="file" accept=".xlsx,.xls" onchange="updateGuruExcelName(this)"></label><div id="gmAdmGuruExcelName" class="gm-file-name">Belum ada file dipilih</div><button class="btn btn-outline-primary w-100" onclick="importGuruExcel()"><i class="bi bi-upload me-1"></i>Import Guru + Akun</button></div><div id="gmAdmTeachers" class="gm-admin-teacher-list"></div></div></div><div class="col-lg-7"><div class="card-flat"><div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"><div><div class="gm-admin-kicker">PENJADWALAN</div><h6 class="gm-admin-title mb-0">Tambah Jadwal Mengajar</h6></div></div><div class="row g-2"><div class="col-md-4"><label class="form-label">Guru</label><select id="gmAdmJadGuru" class="form-select"></select></div><div class="col-md-4"><label class="form-label">Kelas</label><select id="gmAdmJadKelas" class="form-select"></select></div><div class="col-md-4"><label class="form-label">Mata Pelajaran</label><input id="gmAdmJadMapel" class="form-control" placeholder="Kimia"></div><div class="col-md-3"><label class="form-label">Hari</label><select id="gmAdmJadHari" class="form-select"><option>Senin</option><option>Selasa</option><option>Rabu</option><option>Kamis</option><option>Jumat</option></select></div><div class="col-md-3"><label class="form-label">Jam Ke</label><input id="gmAdmJadJamKe" class="form-control" placeholder="1"></div><div class="col-md-3"><label class="form-label">Mulai</label><input id="gmAdmJadMulai" type="time" class="form-control"></div><div class="col-md-3"><label class="form-label">Selesai</label><input id="gmAdmJadSelesai" type="time" class="form-control"></div></div><button class="btn btn-success mt-3" onclick="saveGuruScheduleAdmin()"><i class="bi bi-calendar-plus me-1"></i>Tambah Jadwal</button><div id="gmAdmSchedules" class="mt-3"></div></div></div></div><div class="card-flat mt-3"><h6 class="fw-bold">Nomor WhatsApp Perwakilan Kelas</h6><div id="gmAdmClassWA"></div></div>';loadGuruAdminData();}
-    function loadGuruAdminData(){gmCall('gmAdminGetTeachers',[getCredential()],function(r){var t=document.getElementById('gmAdmJadGuru');document.getElementById('gmAdmTeachers').innerHTML=(r.data||[]).map(x=>'<div class="gm-alert mb-1"><strong>'+gmEsc(x.nama)+'</strong><br><small>'+gmEsc(x.username)+(x.nip?' • NIP. '+gmEsc(x.nip):'')+'</small></div>').join('');t.innerHTML=(r.data||[]).map(x=>'<option value="'+gmEsc(x.username)+'" data-id="'+gmEsc(x.id)+'">'+gmEsc(x.nama)+' ('+gmEsc(x.username)+')</option>').join('');});gmCall('gmAdminGetClasses',[getCredential()],function(r){var k=document.getElementById('gmAdmJadKelas');k.innerHTML=(r.data||[]).map(x=>'<option value="'+gmEsc(x.id)+'">'+gmEsc(x.nama)+'</option>').join('');document.getElementById('gmAdmClassWA').innerHTML='<div class="gm-table-wrap"><table class="gm-table"><thead><tr><th>Kelas</th><th>No WhatsApp</th><th>Aksi</th></tr></thead><tbody>'+(r.data||[]).map(x=>'<tr><td>'+gmEsc(x.nama)+'</td><td><input id="gmwa_'+gmEsc(x.id)+'" class="form-control form-control-sm" value="'+gmEsc(x.wa)+'"></td><td><button class="btn btn-sm btn-primary" onclick="saveClassWA(\''+gmEsc(x.id)+'\')">Simpan</button></td></tr>').join('')+'</tbody></table></div>';});gmCall('gmAdminGetSchedules',[getCredential()],function(r){document.getElementById('gmAdmSchedules').innerHTML='<div class="gm-table-wrap"><table class="gm-table"><thead><tr><th>Guru</th><th>Kelas</th><th>Mapel</th><th>Hari</th><th>Jam</th><th>Aksi</th></tr></thead><tbody>'+(r.data||[]).map(x=>'<tr><td>'+gmEsc(x.guru)+'</td><td>'+gmEsc(x.kelas)+'</td><td>'+gmEsc(x.mapel)+'</td><td>'+gmEsc(x.hari)+'</td><td>'+gmJam(x.jamMulai)+'–'+gmJam(x.jamSelesai)+'</td><td><button class="btn btn-sm btn-outline-danger" onclick="deleteGuruSchedule(\''+gmEsc(x.id)+'\')"><i class="bi bi-trash"></i></button></td></tr>').join('')+'</tbody></table></div>';});}
+    var gmAdminScheduleRows = [];
+    var gmEditingScheduleId = '';
+    function renderGuruAdmin(c){if(getUserRoleLocal()!=='superadmin'){c.innerHTML='<div class="gm-empty text-danger"><i class="bi bi-shield-x"></i><div class="fw-bold">Akses ditolak</div></div>';return;}c.innerHTML='<div class="gm-page-hero"><span>ADMINISTRASI</span><h3>Guru, Jadwal & WhatsApp Kelas</h3><p>Kelola akun guru dengan cepat. Login menggunakan username dan password.</p></div><div class="row g-3"><div class="col-lg-5"><div class="card-flat gm-admin-account-card"><div class="gm-admin-card-head"><div><div class="gm-admin-kicker">AKUN PENGGUNA</div><h6 class="gm-admin-title">Tambah Guru</h6><p class="gm-admin-subtitle">Isi data dasar. Email Auth dibuat otomatis oleh sistem.</p></div><span class="gm-admin-icon"><i class="bi bi-person-plus-fill"></i></span></div><div class="gm-admin-form"><div class="gm-form-field"><label for="gmAdmGuruUsername">Username</label><div class="gm-input-wrap"><i class="bi bi-at"></i><input id="gmAdmGuruUsername" class="form-control" autocomplete="off" placeholder="contoh: ahmad"></div><small>Dipakai saat login.</small></div><div class="gm-form-field"><label for="gmAdmGuruNama">Nama Lengkap</label><div class="gm-input-wrap"><i class="bi bi-person"></i><input id="gmAdmGuruNama" class="form-control" autocomplete="name" placeholder="Nama guru"></div></div><div class="gm-form-grid"><div class="gm-form-field"><label for="gmAdmGuruWA">WhatsApp</label><div class="gm-input-wrap"><i class="bi bi-whatsapp"></i><input id="gmAdmGuruWA" class="form-control" inputmode="tel" placeholder="62812xxxxxxx"></div></div><div class="gm-form-field"><label for="gmAdmGuruRole">Role</label><select id="gmAdmGuruRole" class="form-select"><option value="guru">Guru</option><option value="piket">Piket</option><option value="superadmin">Superadmin</option></select></div></div><div class="gm-form-field"><label for="gmAdmGuruPassword">Password</label><div class="gm-input-wrap gm-password-wrap"><i class="bi bi-key"></i><input id="gmAdmGuruPassword" type="password" class="form-control" value="guru123!" autocomplete="new-password"><button type="button" class="gm-password-toggle" onclick="toggleGuruPassword()" aria-label="Tampilkan password"><i class="bi bi-eye"></i></button></div><small>Password awal: <strong>guru123!</strong>. Bisa diganti sebelum disimpan.</small></div></div><button class="btn btn-primary gm-save-account-btn" onclick="saveGuruAdmin()"><i class="bi bi-person-check-fill"></i><span>Simpan Akun Guru</span></button><div class="gm-admin-security"><i class="bi bi-shield-check"></i><span>Password tidak disimpan sebagai teks biasa di database. Sistem menggunakan Supabase Auth.</span></div><div class="gm-admin-divider"><span>ATAU IMPORT EXCEL</span></div><div class="gm-import-box"><div><strong>Import banyak guru sekaligus</strong><small>Username, Nama, WhatsApp, Role, Password. Email boleh dikosongkan.</small></div><label class="gm-file-btn"><i class="bi bi-file-earmark-spreadsheet"></i><span>Pilih Excel</span><input id="gmAdmGuruExcel" type="file" accept=".xlsx,.xls" onchange="updateGuruExcelName(this)"></label><div id="gmAdmGuruExcelName" class="gm-file-name">Belum ada file dipilih</div><button class="btn btn-outline-primary w-100" onclick="importGuruExcel()"><i class="bi bi-upload me-1"></i>Import Guru + Akun</button></div><div id="gmAdmTeachers" class="gm-admin-teacher-list"></div></div></div><div class="col-lg-7"><div class="card-flat"><div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3"><div><div class="gm-admin-kicker">PENJADWALAN</div><h6 class="gm-admin-title mb-0" id="gmAdmScheduleFormTitle">Tambah Jadwal Mengajar</h6></div></div><div class="row g-2"><div class="col-md-4"><label class="form-label">Guru</label><select id="gmAdmJadGuru" class="form-select"></select></div><div class="col-md-4"><label class="form-label">Kelas</label><select id="gmAdmJadKelas" class="form-select"></select></div><div class="col-md-4"><label class="form-label">Mata Pelajaran</label><input id="gmAdmJadMapel" class="form-control" placeholder="Kimia"></div><div class="col-md-3"><label class="form-label">Hari</label><select id="gmAdmJadHari" class="form-select"><option>Senin</option><option>Selasa</option><option>Rabu</option><option>Kamis</option><option>Jumat</option></select></div><div class="col-md-3"><label class="form-label">Jam Ke</label><input id="gmAdmJadJamKe" class="form-control" placeholder="1"></div><div class="col-md-3"><label class="form-label">Mulai</label><input id="gmAdmJadMulai" type="time" class="form-control"></div><div class="col-md-3"><label class="form-label">Selesai</label><input id="gmAdmJadSelesai" type="time" class="form-control"></div></div><div class="gm-schedule-form-actions"><button id="gmAdmScheduleSaveBtn" class="btn btn-success" onclick="saveGuruScheduleAdmin()"><i class="bi bi-calendar-plus me-1"></i>Simpan Jadwal</button><button id="gmAdmScheduleCancelBtn" class="btn btn-outline-secondary" onclick="cancelEditGuruSchedule()" style="display:none"><i class="bi bi-x-lg me-1"></i>Batal Edit</button></div><div class="gm-schedule-list-head"><div><strong>Daftar Jadwal Mengajar</strong><small>Perbaiki jadwal langsung tanpa perlu menghapusnya.</small></div><span id="gmAdmScheduleCount" class="gm-schedule-count">0 jadwal</span></div><div id="gmAdmSchedules" class="mt-3"></div></div></div></div><div class="card-flat mt-3"><h6 class="fw-bold">Nomor WhatsApp Perwakilan Kelas</h6><div id="gmAdmClassWA"></div></div>';loadGuruAdminData();}
+    function loadGuruAdminData(){gmCall('gmAdminGetTeachers',[getCredential()],function(r){var t=document.getElementById('gmAdmJadGuru');document.getElementById('gmAdmTeachers').innerHTML=(r.data||[]).map(x=>'<div class="gm-alert mb-1"><strong>'+gmEsc(x.nama)+'</strong><br><small>'+gmEsc(x.username)+(x.nip?' • NIP. '+gmEsc(x.nip):'')+'</small></div>').join('');t.innerHTML=(r.data||[]).map(x=>'<option value="'+gmEsc(x.username)+'" data-id="'+gmEsc(x.id)+'">'+gmEsc(x.nama)+' ('+gmEsc(x.username)+')</option>').join('');});gmCall('gmAdminGetClasses',[getCredential()],function(r){var k=document.getElementById('gmAdmJadKelas');k.innerHTML=(r.data||[]).map(x=>'<option value="'+gmEsc(x.id)+'">'+gmEsc(x.nama)+'</option>').join('');document.getElementById('gmAdmClassWA').innerHTML='<div class="gm-table-wrap"><table class="gm-table"><thead><tr><th>Kelas</th><th>No WhatsApp</th><th>Aksi</th></tr></thead><tbody>'+(r.data||[]).map(x=>'<tr><td>'+gmEsc(x.nama)+'</td><td><input id="gmwa_'+gmEsc(x.id)+'" class="form-control form-control-sm" value="'+gmEsc(x.wa)+'"></td><td><button class="btn btn-sm btn-primary" onclick="saveClassWA(\''+gmEsc(x.id)+'\')">Simpan</button></td></tr>').join('')+'</tbody></table></div>';});gmCall('gmAdminGetSchedules',[getCredential()],function(r){gmAdminScheduleRows=r.data||[];var count=document.getElementById('gmAdmScheduleCount');if(count)count.textContent=gmAdminScheduleRows.length+' jadwal';var target=document.getElementById('gmAdmSchedules');if(!target)return;target.innerHTML=gmAdminScheduleRows.length?'<div class="gm-table-wrap"><table class="gm-table gm-admin-schedule-table"><thead><tr><th>Guru</th><th>Kelas</th><th>Mapel</th><th>Hari</th><th>Jam</th><th>Aksi</th></tr></thead><tbody>'+gmAdminScheduleRows.map(x=>'<tr><td><strong>'+gmEsc(x.guru)+'</strong></td><td>'+gmEsc(x.kelas)+'</td><td>'+gmEsc(x.mapel)+'</td><td><span class="gm-schedule-pill">'+gmEsc(x.hari)+'</span></td><td>'+gmJam(x.jamMulai)+'–'+gmJam(x.jamSelesai)+'</td><td><div class="gm-row-actions"><button class="btn btn-sm btn-outline-primary" onclick="editGuruSchedule(\''+gmEsc(x.id)+'\')"><i class="bi bi-pencil-square me-1"></i>Edit</button><button class="btn btn-sm btn-outline-danger" onclick="deleteGuruSchedule(\''+gmEsc(x.id)+'\')" aria-label="Hapus jadwal"><i class="bi bi-trash"></i></button></div></td></tr>').join('')+'</tbody></table></div>':'<div class="gm-empty">Belum ada jadwal mengajar.</div>';});}
     function toggleGuruPassword(){var i=document.getElementById('gmAdmGuruPassword');var b=document.querySelector('.gm-password-toggle i');if(!i)return;var show=i.type==='password';i.type=show?'text':'password';if(b)b.className=show?'bi bi-eye-slash':'bi bi-eye';}
     function updateGuruExcelName(input){var el=document.getElementById('gmAdmGuruExcelName');if(el)el.textContent=input&&input.files&&input.files.length?input.files[0].name:'Belum ada file dipilih';}
     async function saveGuruAdmin(){var data={username:document.getElementById('gmAdmGuruUsername').value,nama:document.getElementById('gmAdmGuruNama').value,noWa:document.getElementById('gmAdmGuruWA').value,role:document.getElementById('gmAdmGuruRole').value,password:document.getElementById('gmAdmGuruPassword').value||'guru123!'};if(!data.username.trim()||!data.nama.trim())return showToast('Username dan Nama Lengkap wajib diisi.','error');try{showLoading('Membuat akun...');var r=await SISJAR_AUTH.provisionTeacher(data);hideLoading();showToast(r.message||'Akun berhasil disimpan.',r.success?'success':'error');if(r.success){document.getElementById('gmAdmGuruUsername').value='';document.getElementById('gmAdmGuruNama').value='';document.getElementById('gmAdmGuruWA').value='';document.getElementById('gmAdmGuruRole').value='guru';document.getElementById('gmAdmGuruPassword').value='guru123!';loadGuruAdminData();}}catch(e){hideLoading();showToast(e.message||'Gagal membuat akun.','error');}}
 async function importGuruExcel(){const input=document.getElementById('gmAdmGuruExcel');if(!input||!input.files.length)return showToast('Pilih file Excel guru terlebih dahulu.','error');try{const wb=XLSX.read(await input.files[0].arrayBuffer(),{type:'array'});const ws=wb.Sheets[wb.SheetNames[0]];const rows=XLSX.utils.sheet_to_json(ws,{defval:''}).map(r=>{const n={};Object.keys(r).forEach(k=>{const key=String(k).trim().toLowerCase().replace(/[\s_-]+/g,'');n[key]=r[k];});return {username:n.username||'',nama:n.nama||n.name||'',email:n.email||'',password:n.password||'guru123!',role:n.role||'guru',nip:n.nip||'',noWa:n.nowa||n.whatsapp||''};});if(!rows.length)return showToast('Excel tidak berisi data.','error');showLoading('Mengimpor akun guru...');const r=await SISJAR_AUTH.importTeachers(rows);hideLoading();showToast(r.message||'Import selesai.',r.success?'success':'error');loadGuruAdminData();}catch(e){hideLoading();showToast(e.message||'Import guru gagal.','error');}}
-    function saveGuruScheduleAdmin(){var o=document.getElementById('gmAdmJadGuru').selectedOptions[0];gmCall('gmAdminSaveSchedule',[{usernameGuru:document.getElementById('gmAdmJadGuru').value,idGuru:o?.dataset.id||'',idKelas:document.getElementById('gmAdmJadKelas').value,mapel:document.getElementById('gmAdmJadMapel').value,hari:document.getElementById('gmAdmJadHari').value,jamKe:document.getElementById('gmAdmJadJamKe').value,jamMulai:document.getElementById('gmAdmJadMulai').value,jamSelesai:document.getElementById('gmAdmJadSelesai').value},getCredential()],function(r){showToast(r.message,r.success?'success':'error');if(r.success)loadGuruAdminData();});}
+    function editGuruSchedule(id){var x=gmAdminScheduleRows.find(function(row){return String(row.id)===String(id);});if(!x)return showToast('Jadwal tidak ditemukan.','error');gmEditingScheduleId=String(x.id);var guru=document.getElementById('gmAdmJadGuru'),kelas=document.getElementById('gmAdmJadKelas');guru.value=x.username||'';kelas.value=x.idKelas||'';document.getElementById('gmAdmJadMapel').value=x.mapel||'';document.getElementById('gmAdmJadHari').value=x.hari||'Senin';document.getElementById('gmAdmJadJamKe').value=x.jamKe||'';document.getElementById('gmAdmJadMulai').value=x.jamMulai||'';document.getElementById('gmAdmJadSelesai').value=x.jamSelesai||'';document.getElementById('gmAdmScheduleFormTitle').textContent='Edit Jadwal Mengajar';var btn=document.getElementById('gmAdmScheduleSaveBtn');btn.innerHTML='<i class="bi bi-check2-circle me-1"></i>Perbarui Jadwal';btn.classList.remove('btn-success');btn.classList.add('btn-primary');document.getElementById('gmAdmScheduleCancelBtn').style.display='inline-flex';document.querySelector('.gm-schedule-form-actions').scrollIntoView({behavior:'smooth',block:'center'});}
+    function cancelEditGuruSchedule(){gmEditingScheduleId='';['gmAdmJadMapel','gmAdmJadJamKe','gmAdmJadMulai','gmAdmJadSelesai'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});document.getElementById('gmAdmScheduleFormTitle').textContent='Tambah Jadwal Mengajar';var btn=document.getElementById('gmAdmScheduleSaveBtn');btn.innerHTML='<i class="bi bi-calendar-plus me-1"></i>Simpan Jadwal';btn.classList.remove('btn-primary');btn.classList.add('btn-success');document.getElementById('gmAdmScheduleCancelBtn').style.display='none';}
+    function saveGuruScheduleAdmin(){var o=document.getElementById('gmAdmJadGuru').selectedOptions[0];var payload={id:gmEditingScheduleId||undefined,usernameGuru:document.getElementById('gmAdmJadGuru').value,idGuru:o?.dataset.id||'',idKelas:document.getElementById('gmAdmJadKelas').value,mapel:document.getElementById('gmAdmJadMapel').value,hari:document.getElementById('gmAdmJadHari').value,jamKe:document.getElementById('gmAdmJadJamKe').value,jamMulai:document.getElementById('gmAdmJadMulai').value,jamSelesai:document.getElementById('gmAdmJadSelesai').value};gmCall('gmAdminSaveSchedule',[payload,getCredential()],function(r){showToast(r.message,r.success?'success':'error');if(r.success){cancelEditGuruSchedule();loadGuruAdminData();}});}
     function deleteGuruSchedule(id){if(!confirm('Hapus jadwal ini?'))return;gmCall('gmAdminDeleteSchedule',[id,getCredential()],function(r){showToast(r.message,r.success?'success':'error');if(r.success)loadGuruAdminData();});}
     function saveClassWA(id){gmCall('gmAdminSaveClassWA',[id,document.getElementById('gmwa_'+id).value,getCredential()],function(r){showToast(r.message,r.success?'success':'error');});}
     // ==============================================================
@@ -5419,9 +5623,73 @@ async function importGuruExcel(){const input=document.getElementById('gmAdmGuruE
                 .getLaporanSiswaBundle(firstKelas, tglMulai, tglSelesai, statuses, username);
         }, 1500);
     });
+
+/* ================================================================
+   SISJAR GLOBAL TABLE SEARCH
+   Adds contextual search to data tables that do not already have one.
+   Filters currently loaded rows only; it does not replace server queries.
+   ================================================================ */
+(function(){
+  'use strict';
+  function hasExistingSearch(table){
+    var card=table.closest('.card-flat,.card,.gm-panel,.gm-section,.table-responsive');
+    if(!card) card=table.parentElement;
+    if(!card) return false;
+    return !!card.querySelector('input[type="search"],input[placeholder*="Cari" i],input[placeholder*="Search" i],[data-table-search]');
+  }
+  function headerTerms(table){
+    var heads=Array.from(table.querySelectorAll('thead th')).map(function(th){return th.textContent.trim();}).filter(Boolean);
+    var useful=heads.filter(function(x){return !/^(no|nomor|aksi|action|#)$/i.test(x);}).slice(0,3);
+    return useful.length ? useful.join(', ') : 'nama, kelas, NIS, atau data lainnya';
+  }
+  function installTableSearch(table){
+    if(!table || table.dataset.sisjarSearchInstalled==='1' || table.closest('.gm-print-area,.no-search,[data-no-search="true"]')) return;
+    if(hasExistingSearch(table)) return;
+    var parent=table.closest('.table-responsive,.gm-table-wrap') || table;
+    var host=parent.parentElement || parent;
+    if(!host || host.querySelector(':scope > .sisjar-table-search')) return;
+    var bar=document.createElement('div');
+    bar.className='sisjar-table-search';
+    bar.innerHTML='<label><i class="bi bi-search" aria-hidden="true"></i><span class="visually-hidden">Cari data tabel</span><input type="search" autocomplete="off" placeholder="Cari '+headerTerms(table).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];})+'…" aria-label="Cari data pada tabel"></label><small class="sisjar-table-search-count" aria-live="polite"></small>';
+    host.insertBefore(bar,parent);
+    var input=bar.querySelector('input');
+    var count=bar.querySelector('small');
+    var apply=function(){
+      var q=input.value.trim().toLocaleLowerCase('id');
+      var rows=Array.from(table.querySelectorAll('tbody tr')).filter(function(tr){return !tr.classList.contains('sisjar-search-empty');});
+      var visible=0;
+      rows.forEach(function(tr){
+        var match=!q || tr.textContent.toLocaleLowerCase('id').includes(q);
+        tr.hidden=!match;
+        if(match) visible++;
+      });
+      var empty=table.querySelector('tbody tr.sisjar-search-empty');
+      if(!empty && rows.length){empty=document.createElement('tr');empty.className='sisjar-search-empty';var td=document.createElement('td');td.colSpan=Math.max(1,table.querySelectorAll('thead th').length);td.textContent='Tidak ada data yang cocok dengan pencarian.';empty.appendChild(td);table.querySelector('tbody')?.appendChild(empty);}
+      if(empty) empty.hidden=(!q || visible>0 || rows.length===0);
+      count.textContent=q ? visible+' dari '+rows.length+' baris' : rows.length+' baris';
+    };
+    input.addEventListener('input',apply);
+    table.dataset.sisjarSearchInstalled='1';
+    apply();
+  }
+  function scan(root){
+    if(!root || !root.querySelectorAll) return;
+    root.querySelectorAll('table').forEach(installTableSearch);
+    if(root.matches && root.matches('table')) installTableSearch(root);
+  }
+  function start(){
+    var content=document.getElementById('dynamicContent');
+    if(!content) return;
+    scan(content);
+    var observer=new MutationObserver(function(records){
+      records.forEach(function(record){record.addedNodes.forEach(function(node){if(node.nodeType===1) scan(node);});});
+    });
+    observer.observe(content,{childList:true,subtree:true});
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',start,{once:true}); else start();
+})();
+
 </script>
-
-
 <style id="sisjar-bottom-shell-fix">
 /* SISJAR final shell cleanup: no legacy frame, no clipped sidebar footer */
 html,body{
@@ -5988,7 +6256,183 @@ body.modal-open{overflow:hidden!important}
 #uploadModal .modal-body{padding:20px!important}
 #uploadModal .modal-header{padding:16px 20px!important}
 #uploadModal .modal-footer{padding:14px 20px!important}
-</style>
 
+
+/* SISJAR UI CONSOLIDATION — comfortable spacing and schedule editing */
+:root{--sisjar-space-1:6px;--sisjar-space-2:10px;--sisjar-space-3:14px;--sisjar-space-4:18px;--sisjar-space-5:24px;--sisjar-control-h:44px}
+.card-flat,.gm-ui,.sisjar-settings-section,.sisjar-settings-card{padding:clamp(16px,2vw,24px)!important}
+.gm-page-hero{padding:22px 24px!important;margin-bottom:20px!important}
+.gm-page-hero p{line-height:1.65!important;margin-top:6px!important}
+.form-label,.gm-form-field label{display:block;margin-bottom:7px!important;font-size:.76rem!important;font-weight:700!important;line-height:1.4!important}
+.form-control,.form-select{min-height:var(--sisjar-control-h)!important;padding:10px 13px!important;border-radius:11px!important;line-height:1.4!important}
+textarea.form-control{min-height:104px!important;padding:12px 14px!important}
+.row.g-2,.row.g-3{--bs-gutter-x:1rem;--bs-gutter-y:1rem}
+.gm-admin-form{gap:16px!important}
+.gm-form-field{gap:6px!important}
+.gm-admin-title{line-height:1.35!important;margin-bottom:5px!important}
+.gm-admin-subtitle{line-height:1.6!important;margin-bottom:0!important}
+.gm-admin-account-card,.gm-admin-account-card .gm-import-box{padding:18px!important}
+.gm-schedule-form-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.gm-schedule-form-actions .btn{min-height:42px;padding:9px 16px;border-radius:10px;font-weight:700}
+.gm-schedule-list-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px 0 12px;padding-top:18px;border-top:1px solid var(--ui-line,var(--h-line,#e7edf5))}
+.gm-schedule-list-head strong{display:block;font-size:.86rem;font-weight:800;color:var(--ui-text,var(--h-text,#23344d))}
+.gm-schedule-list-head small{display:block;margin-top:4px;font-size:.68rem;color:var(--ui-muted,var(--h-muted,#7c8ba1))}
+.gm-schedule-count{font-size:.67rem;font-weight:750;color:var(--ui-primary-strong,#376fc1);background:var(--ui-primary-soft,#edf4ff);padding:6px 10px;border-radius:20px;white-space:nowrap}
+.gm-admin-schedule-table{min-width:720px}
+.gm-admin-schedule-table th{padding:13px 14px!important}
+.gm-admin-schedule-table td{padding:13px 14px!important;line-height:1.45}
+.gm-row-actions{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.gm-row-actions .btn{min-height:34px;border-radius:8px;font-size:.68rem;font-weight:700;padding:6px 10px}
+.gm-table-wrap{border-radius:13px!important}
+.gm-table tbody tr:hover td{background:var(--ui-primary-soft,rgba(80,130,210,.045))}
+.gm-alert{padding:12px 14px!important;line-height:1.55!important}
+.gm-kpi-grid{gap:14px!important}
+.gm-kpi{padding:18px!important}
+.modal-content{border-radius:18px!important;overflow:hidden}
+.modal-header,.modal-footer{padding:16px 20px!important}
+.modal-body{padding:20px!important}
+@media(max-width:767.98px){
+ .card-flat,.gm-ui,.sisjar-settings-section,.sisjar-settings-card{padding:15px!important}
+ .gm-page-hero{padding:17px 18px!important;margin-bottom:14px!important}
+ .gm-schedule-list-head{margin-top:18px;padding-top:15px}
+ .gm-schedule-form-actions .btn{flex:1}
+ .gm-admin-schedule-table{min-width:690px}
+ .modal-body{padding:16px!important}
+}
+
+
+/* ================================================================
+   SISJAR GLOBAL RHYTHM + ROLE NAV + TABLE SEARCH
+   ================================================================ */
+:root{
+  --sisjar-content-gap:22px;
+  --sisjar-card-pad:clamp(18px,2vw,26px);
+  --sisjar-field-gap:8px;
+  --sisjar-table-row-pad:13px;
+}
+#dynamicContent{display:flex;flex-direction:column;gap:var(--sisjar-content-gap);padding-bottom:28px}
+#dynamicContent > *{min-width:0;margin-bottom:0!important}
+#dynamicContent .gm-page-hero{margin:0!important;padding:24px 26px!important}
+#dynamicContent .card-flat{margin-top:0!important;margin-bottom:0!important;padding:var(--sisjar-card-pad)!important}
+#dynamicContent .gm-page-hero + .nav-tabs{margin-top:2px!important;margin-bottom:0!important}
+#dynamicContent .tab-content{margin-top:16px!important}
+#dynamicContent .tab-content .card-flat{margin-top:0!important}
+#dynamicContent .row{--bs-gutter-x:1.15rem;--bs-gutter-y:1.15rem}
+#dynamicContent .form-label{margin-bottom:8px!important;line-height:1.45!important}
+#dynamicContent .form-control,#dynamicContent .form-select{margin-bottom:0!important}
+#dynamicContent .btn{min-height:40px;vertical-align:middle}
+#dynamicContent .table-responsive,#dynamicContent .gm-table-wrap{margin-top:0!important;border-radius:13px;}
+#dynamicContent .table{margin-bottom:0!important}
+#dynamicContent .table th,#dynamicContent .table td{vertical-align:middle;}
+#dynamicContent .nav-tabs{display:flex!important;flex-wrap:wrap!important;gap:8px!important;list-style:none!important;padding-left:0!important;margin:0!important;border-bottom:1px solid var(--ref-line,#e4ebf2)!important}
+#dynamicContent .nav-tabs .nav-item{list-style:none!important;margin:0!important;padding:0!important}
+#dynamicContent .nav-tabs .nav-link{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 16px!important;border:1px solid transparent!important;border-radius:10px 10px 0 0!important;white-space:nowrap}
+#dynamicContent .nav-tabs .nav-link::marker{content:''!important}
+.sisjar-table-search{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding:0;min-width:0}
+.sisjar-table-search label{display:flex;align-items:center;gap:10px;width:min(100%,390px);min-height:42px;margin:0;padding:0 13px;border:1px solid var(--ref-line,#e3eaf0);border-radius:11px;background:var(--ref-surface-2,#f7fafb);color:var(--ref-muted,#77869a)}
+.sisjar-table-search label i{font-size:14px;color:var(--ref-primary-strong,#279e9a)}
+.sisjar-table-search input{width:100%;min-width:0;border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;color:var(--ref-text,#243449)!important;font:500 13px/1.4 'Plus Jakarta Sans',sans-serif!important;padding:9px 0!important}
+.sisjar-table-search input::placeholder{color:var(--ref-muted,#8795a7)}
+.sisjar-table-search-count{flex:0 0 auto;color:var(--ref-muted,#8290a2);font-size:11px;font-weight:700}
+.sisjar-search-empty td{padding:22px!important;text-align:center!important;color:var(--ref-muted,#8795a7)!important;background:var(--ref-surface-2,#f7fafb)!important;font-size:12px!important}
+#dynamicContent table tbody tr[hidden]{display:none!important}
+@media(max-width:767.98px){
+  :root{--sisjar-content-gap:16px;--sisjar-card-pad:16px}
+  #dynamicContent .gm-page-hero{padding:18px 18px!important}
+  #dynamicContent .row{--bs-gutter-x:.85rem;--bs-gutter-y:.9rem}
+  .sisjar-table-search{align-items:stretch;flex-direction:column;gap:6px;margin-bottom:10px}
+  .sisjar-table-search label{width:100%}
+  .sisjar-table-search-count{text-align:right}
+  #dynamicContent .nav-tabs{flex-wrap:nowrap!important;overflow-x:auto!important;padding-bottom:2px!important}
+}
+
+
+/* ================================================================
+   SPACING PASS — dashboard, schedules and report workspace
+   ================================================================ */
+#dynamicContent{display:flex!important;flex-direction:column!important;gap:22px!important}
+#dynamicContent>.gm-ui,#dynamicContent>.gm-page-hero{margin-bottom:0!important}
+#dynamicContent .gm-kpi-grid{display:grid!important;gap:16px!important;margin:0!important}
+#dynamicContent .gm-kpi{min-height:104px!important;padding:19px!important;border-radius:17px!important}
+#dynamicContent #gmDashSchedules.row{--bs-gutter-x:1.35rem!important;--bs-gutter-y:1.35rem!important;margin-top:0!important;margin-bottom:0!important}
+#dynamicContent #gmDashSchedules>[class*="col-"]{display:flex!important;min-width:0!important}
+#dynamicContent #gmDashSchedules .gm-schedule-card{width:100%!important;min-height:205px!important;padding:22px!important;gap:11px!important;border-radius:18px!important}
+#dynamicContent .gm-schedule-actions{margin-top:auto!important;padding-top:8px!important;gap:12px!important}
+#dynamicContent .gm-schedule-actions .btn{min-width:118px!important;min-height:48px!important;padding:11px 17px!important;border-radius:13px!important}
+#dynamicContent .gm-report-filter-card{margin-bottom:0!important;padding:22px!important}
+.gm-report-filter-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:17px}
+.gm-report-filter-heading strong{display:block;color:var(--sx-text);font-size:.92rem;font-weight:800}
+.gm-report-filter-heading small{display:block;color:var(--sx-muted);font-size:.76rem;margin-top:4px}
+.gm-report-filter-note{padding:6px 10px;border-radius:999px;background:var(--sx-primary-soft);color:var(--sx-primary);font-size:.68rem;font-weight:800;white-space:nowrap}
+.gm-report-tabs{margin:0!important;padding:0 0 5px!important;gap:10px!important}
+.gm-report-tab-content{margin-top:0!important}
+.gm-report-tab-content .card-flat{padding:22px!important}
+.gm-report-period-line{padding:11px 14px;margin:0 0 14px;border-radius:11px;background:var(--sx-surface-soft);color:var(--sx-muted);font-size:.76rem;font-weight:700}
+.gm-report-period-line span{margin:0 7px;color:var(--sx-primary)}
+.gm-report-text-cell{min-width:180px;max-width:300px;white-space:normal!important;line-height:1.55!important}
+@media(max-width:900px){#dynamicContent{gap:18px!important}#dynamicContent .gm-kpi-grid{gap:12px!important}#dynamicContent #gmDashSchedules.row{--bs-gutter-x:1rem!important;--bs-gutter-y:1rem!important}}
+@media(max-width:650px){#dynamicContent{gap:17px!important}#dynamicContent .gm-kpi{min-height:96px!important;padding:15px!important}#dynamicContent #gmDashSchedules.row{--bs-gutter-x:.8rem!important;--bs-gutter-y:1rem!important}#dynamicContent #gmDashSchedules .gm-schedule-card{min-height:0!important;padding:19px!important}#dynamicContent .gm-schedule-actions{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important}#dynamicContent .gm-schedule-actions .btn{min-width:0!important;width:100%!important;padding:10px 8px!important}.gm-report-filter-heading{align-items:flex-start}.gm-report-filter-card,#dynamicContent .gm-report-tab-content .card-flat{padding:17px!important}}
+
+
+/* SISJAR spacing restoration — preserve report-tab behavior and restore dashboard breathing room */
+#dynamicContent #gmDashSchedules{
+  display:grid!important;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))!important;
+  gap:18px!important;
+  margin:0!important;
+  padding:2px!important;
+  align-items:stretch!important;
+}
+#dynamicContent #gmDashSchedules>[class*="col-"]{
+  width:auto!important;
+  max-width:none!important;
+  flex:none!important;
+  padding:0!important;
+  margin:0!important;
+  min-width:0!important;
+}
+#dynamicContent #gmDashSchedules .gm-schedule-card{
+  height:100%!important;
+  min-height:190px!important;
+  padding:20px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:10px!important;
+  margin:0!important;
+  border-radius:18px!important;
+}
+#dynamicContent #gmDashSchedules .gm-schedule-card .time{margin:0 0 2px!important;line-height:1.5!important}
+#dynamicContent #gmDashSchedules .gm-schedule-card h5{margin:0!important;line-height:1.35!important}
+#dynamicContent #gmDashSchedules .gm-schedule-card>small{display:block!important;margin:0 0 6px!important}
+#dynamicContent #gmDashSchedules .gm-schedule-actions{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:center!important;
+  gap:12px!important;
+  margin-top:auto!important;
+  padding-top:10px!important;
+}
+#dynamicContent #gmDashSchedules .gm-schedule-actions .btn{
+  min-width:112px!important;
+  min-height:46px!important;
+  margin:0!important;
+}
+#dynamicContent .gm-kpi-grid{gap:16px!important;margin-bottom:22px!important}
+#dynamicContent .gm-kpi{min-height:108px!important;padding:19px!important}
+#dynamicContent .gm-page-hero{margin-bottom:22px!important}
+#dynamicContent .gm-page-hero+.gm-kpi-grid{margin-top:0!important}
+#dynamicContent .gm-kpi-grid+.card-flat{margin-top:0!important}
+#dynamicContent>.card-flat,#dynamicContent>.gm-report-tab-content,
+#dynamicContent>.gm-page-hero{margin-bottom:20px!important}
+@media(max-width:640px){
+  #dynamicContent #gmDashSchedules{grid-template-columns:minmax(0,1fr)!important;gap:16px!important;padding:1px!important}
+  #dynamicContent #gmDashSchedules .gm-schedule-card{min-height:0!important;padding:18px!important;gap:9px!important}
+  #dynamicContent #gmDashSchedules .gm-schedule-actions{gap:10px!important;padding-top:9px!important}
+  #dynamicContent #gmDashSchedules .gm-schedule-actions .btn{flex:0 1 auto!important;min-width:108px!important;min-height:46px!important}
+  #dynamicContent .gm-kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;margin-bottom:18px!important}
+  #dynamicContent .gm-kpi{padding:15px!important;min-height:96px!important}
+}
+
+</style>
 </body>
 </html>
