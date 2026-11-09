@@ -36,19 +36,34 @@
       if (userError) throw userError;
       const user = userData && userData.user;
       if (!user) return null;
-      const { data, error } = await sb().from('profiles').select('id, username, role, status, teacher_id, email, phone').eq('id', user.id).single();
+      const { data, error } = await sb().from('profiles').select('id, username, role, status, teacher_id, email, phone, school_id').eq('id', user.id).single();
       if (error) throw error;
       return data;
     },
     async provisionTeacher(data) {
       const session = await this.session();
       if (!session) throw new Error('Session Superadmin tidak ditemukan.');
-      return functionCall({ action:'provision_teacher', data }, session.access_token);
+      const current = await this.profile();
+      const schoolId = String(data?.school_id || (current?.role === 'superadmin' ? localStorage.getItem('sisjar_active_school_id') : current?.school_id) || '').trim();
+      return functionCall({ action:'provision_teacher', data:{ ...(data||{}), school_id:schoolId } }, session.access_token);
+    },
+    async updateTeacher(data) {
+      const session = await this.session();
+      if (!session) throw new Error('Session Superadmin tidak ditemukan.');
+      return functionCall({ action:'update_teacher', data:data || {} }, session.access_token);
+    },
+    async deleteTeacher(data) {
+      const session = await this.session();
+      if (!session) throw new Error('Session Superadmin tidak ditemukan.');
+      return functionCall({ action:'delete_teacher', data:data || {} }, session.access_token);
     },
     async importTeachers(rows) {
       const session = await this.session();
       if (!session) throw new Error('Session Superadmin tidak ditemukan.');
-      return functionCall({ action:'import_teachers', rows }, session.access_token);
+      const current = await this.profile();
+      const schoolId = String(current?.role === 'superadmin' ? localStorage.getItem('sisjar_active_school_id') : current?.school_id || '').trim();
+      const scopedRows = (rows || []).map(row => ({ ...(row || {}), school_id: row?.school_id || schoolId }));
+      return functionCall({ action:'import_teachers', rows:scopedRows }, session.access_token);
     },
     async logout() {
       const { error } = await sb().auth.signOut();
