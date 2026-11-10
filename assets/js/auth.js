@@ -47,16 +47,6 @@
       const schoolId = String(data?.school_id || (current?.role === 'superadmin' ? localStorage.getItem('sisjar_active_school_id') : current?.school_id) || '').trim();
       return functionCall({ action:'provision_teacher', data:{ ...(data||{}), school_id:schoolId } }, session.access_token);
     },
-    async updateTeacher(data) {
-      const session = await this.session();
-      if (!session) throw new Error('Session Superadmin tidak ditemukan.');
-      return functionCall({ action:'update_teacher', data:data || {} }, session.access_token);
-    },
-    async deleteTeacher(data) {
-      const session = await this.session();
-      if (!session) throw new Error('Session Superadmin tidak ditemukan.');
-      return functionCall({ action:'delete_teacher', data:data || {} }, session.access_token);
-    },
     async importTeachers(rows) {
       const session = await this.session();
       if (!session) throw new Error('Session Superadmin tidak ditemukan.');
