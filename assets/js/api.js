@@ -169,15 +169,18 @@
     const students=await gmGetStudentsForSchedule(v.data.idKelas); if(!students.success)return students;
     const allowed=new Set(['H','T','S','I','A']);
     const validStudents=new Set(students.data.map(x=>x.id));
+    const {data:schRow,error:schErr}=await sb().from('teaching_schedules').select('school_id').eq('id',idJadwal).single();
+    if(schErr||!schRow||!schRow.school_id) return fail('Sekolah pada jadwal ini tidak ditemukan. Hubungi Superadmin.');
+    const schoolId=schRow.school_id;
     const seen=new Set(); const rows=[];
-    for(const item of items){const sid=esc(item.idSiswa).trim();const st=esc(item.status).toUpperCase();if(!sid||seen.has(sid))continue;seen.add(sid);if(!validStudents.has(sid))return fail('Ada siswa yang tidak terdaftar pada kelas jadwal.');if(!allowed.has(st))return fail('Status presensi tidak valid.');rows.push({attendance_date:tanggal,student_id:sid,class_id:v.data.idKelas,status:st,last_updated:new Date().toISOString(),schedule_id:idJadwal});}
+    for(const item of items){const sid=esc(item.idSiswa).trim();const st=esc(item.status).toUpperCase();if(!sid||seen.has(sid))continue;seen.add(sid);if(!validStudents.has(sid))return fail('Ada siswa yang tidak terdaftar pada kelas jadwal.');if(!allowed.has(st))return fail('Status presensi tidak valid.');rows.push({school_id:schoolId,attendance_date:tanggal,student_id:sid,class_id:v.data.idKelas,status:st,last_updated:new Date().toISOString(),schedule_id:idJadwal});}
     if(rows.length){const {error}=await sb().from('student_attendance').upsert(rows,{onConflict:'schedule_id,attendance_date,student_id'});if(error){
       // Existing schema has no declared composite unique constraint in the supplied schema.
       // Fall back to update/insert without assuming a new constraint.
       for(const r of rows){
         const {data:old,error:e1}=await sb().from('student_attendance').select('id').eq('schedule_id',r.schedule_id).eq('attendance_date',r.attendance_date).eq('student_id',r.student_id).limit(1);
         if(e1) return fail(e1.message);
-        if(old&&old.length){const {error:e2}=await sb().from('student_attendance').update({status:r.status,last_updated:r.last_updated,class_id:r.class_id}).eq('id',old[0].id);if(e2)return fail(e2.message);}
+        if(old&&old.length){const {error:e2}=await sb().from('student_attendance').update({status:r.status,last_updated:r.last_updated,class_id:r.class_id,school_id:r.school_id}).eq('id',old[0].id);if(e2)return fail(e2.message);}
         else {const {error:e3}=await sb().from('student_attendance').insert(r);if(e3)return fail(e3.message);}
       }
     }}

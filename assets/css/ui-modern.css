@@ -223,6 +223,8 @@ html body #mainSection .sidebar-link.text-warning{color:var(--m-accent)!importan
 html body #mainSection .sidebar-link.text-warning i{background:rgba(255,176,46,.14)!important;color:var(--m-accent)!important}
 html body #mainSection .sidebar-bottom{margin-top:14px!important;padding:14px 0 0!important;border-top:1px solid rgba(255,255,255,.09)!important;background:transparent!important;display:flex;flex-direction:column;gap:6px}
 html body #mainSection .sidebar-info{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:12px;background:rgba(18,166,114,.12);color:#7ee3bd!important;font-size:.72rem!important;font-weight:700}
+html body #mainSection .sidebar .sidebar-bottom .sidebar-info{background:rgba(18,166,114,.14)!important;border:1px solid rgba(18,166,114,.28)!important;color:#7ee3bd!important;box-shadow:none!important}
+html body #mainSection .sidebar .sidebar-bottom .sidebar-info i,html body #mainSection .sidebar .sidebar-bottom .sidebar-info span{color:#7ee3bd!important;background:transparent!important}
 html body #mainSection .logout-link{color:#ffa3a6!important}
 html body #mainSection .logout-link i{background:rgba(229,72,77,.16)!important;color:#ff9a9e!important}
 html body #mainSection .logout-link:hover{background:rgba(229,72,77,.16)!important;color:#fff!important}
