@@ -2898,9 +2898,9 @@
       var st=String(btn.dataset.status||'H').toUpperCase();
       var root=btn.closest('td')||btn.closest('.gm-att-mobile-card');
       if(!root)return;
-      var input=root.querySelector('.gm-att-status');
-      if(input)input.value=st;
-      root.querySelectorAll('.gm-att-choice').forEach(function(b){b.classList.toggle('active',b.dataset.status===st);});
+      /* Tabel desktop & kartu mobile sama-sama ada di DOM; sinkronkan keduanya agar nilai yang disimpan = yang dipilih */
+      document.querySelectorAll('.gm-att-status').forEach(function(inp){if(inp.dataset.id===id)inp.value=st;});
+      document.querySelectorAll('.gm-att-choice').forEach(function(b){if(b.dataset.id===id)b.classList.toggle('active',b.dataset.status===st);});
     }
     function setGuruMobileAttendance(btn){setGuruAttendanceStatus(btn);}
 

@@ -157,7 +157,7 @@
 
   async function gmGetAttendance(idJadwal,tanggal) {
     const v=await validateSchedule(idJadwal,tanggal); if(!v.success) return v;
-    const {data,error}=await sb().from('student_attendance').select('student_id,status').eq('schedule_id',idJadwal).eq('attendance_date',tanggal);
+    const {data,error}=await sb().from('student_attendance').select('student_id,status').eq('schedule_id',idJadwal).eq('attendance_date',tanggal).order('last_updated',{ascending:true,nullsFirst:true});
     if(error) return fail(error.message);
     const presensi={}; (data||[]).forEach(x=>presensi[x.student_id]=x.status);
     return {success:true,schedule:v.data,presensi};
@@ -180,7 +180,7 @@
       for(const r of rows){
         const {data:old,error:e1}=await sb().from('student_attendance').select('id').eq('schedule_id',r.schedule_id).eq('attendance_date',r.attendance_date).eq('student_id',r.student_id).limit(1);
         if(e1) return fail(e1.message);
-        if(old&&old.length){const {error:e2}=await sb().from('student_attendance').update({status:r.status,last_updated:r.last_updated,class_id:r.class_id,school_id:r.school_id}).eq('id',old[0].id);if(e2)return fail(e2.message);}
+        if(old&&old.length){const {error:e2}=await sb().from('student_attendance').update({status:r.status,last_updated:r.last_updated,class_id:r.class_id,school_id:r.school_id}).eq('schedule_id',r.schedule_id).eq('attendance_date',r.attendance_date).eq('student_id',r.student_id);if(e2)return fail(e2.message);}
         else {const {error:e3}=await sb().from('student_attendance').insert(r);if(e3)return fail(e3.message);}
       }
     }}
