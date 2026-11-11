@@ -14,6 +14,7 @@ const json = (body: unknown, status = 200) =>
 
 function roleLabel(role: string) {
   if (role === 'superadmin') return 'Superadmin';
+  if (role === 'admin_sekolah') return 'Admin Sekolah';
   if (role === 'piket') return 'Piket';
   return 'Guru';
 }
@@ -44,7 +45,7 @@ Deno.serve(async (req) => {
 
       const { data: profile, error: profileError } = await admin
         .from('profiles')
-        .select('id,username,role,status,email,teacher_id,school_id')
+        .select('id,username,role,status,email,teacher_id,school_id,active_school_id')
         .ilike('username', username)
         .maybeSingle();
 
@@ -71,6 +72,7 @@ Deno.serve(async (req) => {
           status: profile.status,
           teacher_id: profile.teacher_id,
           school_id: profile.school_id,
+          active_school_id: profile.active_school_id,
           email: profile.email
         }
       });
@@ -111,7 +113,7 @@ Deno.serve(async (req) => {
       const role = String(d.role || 'guru').trim().toLowerCase();
       const requestedSchoolId = String(d.school_id || '').trim() || null;
 
-      if (!['guru', 'piket', 'superadmin'].includes(role)) {
+      if (!['guru', 'admin_sekolah', 'piket', 'superadmin'].includes(role)) {
         return json({ error: 'Role tidak valid.' }, 400);
       }
       if (!username || !name) return json({ error: 'Username dan Nama Lengkap wajib diisi.' }, 400);
@@ -212,6 +214,88 @@ Deno.serve(async (req) => {
     // Columns supported:
     // Username, Nama, WhatsApp/No_WA, Role, Password, Email(optional), NIP(optional)
     // ============================================================
+    if (action === 'delete_teacher') {
+      const d = body.data || {};
+      const teacherId = String(d.teacher_id || '').trim();
+      if (!teacherId) return json({ error:'ID guru wajib diisi.' },400);
+
+      const { data: teacher, error: teacherError } = await admin
+        .from('teachers').select('id,name,username').eq('id',teacherId).maybeSingle();
+      if (teacherError || !teacher) return json({ error:'Data guru tidak ditemukan.' },404);
+
+      const checks = [
+        ['teaching_schedules','teacher_id','jadwal mengajar'],
+        ['assessments','teacher_id','penilaian'],
+        ['teaching_journals','teacher_id','jurnal mengajar']
+      ];
+      const linked = [];
+      for (const [table,column,label] of checks) {
+        const { count, error } = await admin.from(table).select('id',{count:'exact',head:true}).eq(column,teacherId);
+        if (error) return json({ error:`Gagal memeriksa ${label}: ${error.message}` },400);
+        if ((count || 0) > 0) linked.push(`${count} ${label}`);
+      }
+      if (linked.length) return json({
+        success:false,
+        message:`Guru tidak dapat dihapus permanen karena masih memiliki ${linked.join(', ')}. Gunakan Edit lalu ubah status menjadi Nonaktif agar riwayat akademik tetap tersimpan.`
+      },409);
+
+      const { data: profile, error: profileError } = await admin
+        .from('profiles').select('id').eq('teacher_id',teacherId).maybeSingle();
+      if (profileError) return json({ error:profileError.message },400);
+
+      if (profile?.id) {
+        const { error: profileDeleteError } = await admin.from('profiles').delete().eq('id',profile.id);
+        if (profileDeleteError) return json({ error:`Profil belum dapat dihapus: ${profileDeleteError.message}` },400);
+      }
+      const { error: teacherDeleteError } = await admin.from('teachers').delete().eq('id',teacherId);
+      if (teacherDeleteError) return json({ error:`Data guru belum dapat dihapus: ${teacherDeleteError.message}` },400);
+
+      if (profile?.id) {
+        const { error: authDeleteError } = await admin.auth.admin.deleteUser(profile.id);
+        if (authDeleteError) return json({ error:`Data guru sudah dihapus dari tabel aplikasi, tetapi akun Auth perlu diperiksa: ${authDeleteError.message}` },400);
+      }
+      return json({ success:true, message:`Akun ${teacher.name || teacher.username} berhasil dihapus.` });
+    }
+
+    if (action === 'update_teacher') {
+      const d = body.data || {};
+      const teacherId = String(d.teacher_id || '').trim();
+      const name = String(d.nama || '').trim();
+      const schoolId = String(d.school_id || '').trim();
+      const email = String(d.email || '').trim().toLowerCase();
+      const nip = String(d.nip || '').trim();
+      const phone = String(d.noWa || '').trim();
+      const role = String(d.role || 'guru').trim().toLowerCase();
+      const status = String(d.status || 'Aktif').trim();
+      const password = String(d.password || '');
+      if (!teacherId || !name || !schoolId) return json({ error:'ID guru, nama, dan sekolah wajib diisi.' },400);
+      if (!['guru','admin_sekolah'].includes(role)) return json({ error:'Role tidak valid.' },400);
+      if (!['Aktif','Nonaktif'].includes(status)) return json({ error:'Status akun tidak valid.' },400);
+      if (password && password.length < 6) return json({ error:'Password minimal 6 karakter.' },400);
+      const { data: school, error: schoolError } = await admin.from('schools').select('id').eq('id',schoolId).maybeSingle();
+      if (schoolError || !school) return json({ error:'Sekolah tujuan tidak ditemukan.' },400);
+      const { data: teacher, error: teacherError } = await admin.from('teachers').select('*').eq('id',teacherId).maybeSingle();
+      if (teacherError || !teacher) return json({ error:'Data guru tidak ditemukan.' },404);
+      if (String(teacher.school_id || '') !== schoolId) {
+        const { count: scheduleCount, error: scheduleError } = await admin.from('teaching_schedules').select('id',{count:'exact',head:true}).eq('teacher_id',teacherId).neq('status','Nonaktif');
+        if (scheduleError) return json({ error:scheduleError.message },400);
+        if ((scheduleCount || 0) > 0) return json({ error:'Guru masih memiliki jadwal aktif di sekolah asal. Pindahkan atau nonaktifkan jadwal tersebut terlebih dahulu sebelum mengganti sekolah.' },400);
+      }
+      const { data: profile, error: profileError } = await admin.from('profiles').select('*').eq('teacher_id',teacherId).maybeSingle();
+      if (profileError || !profile) return json({ error:'Profil login guru tidak ditemukan.' },404);
+      const teacherUpdate = await admin.from('teachers').update({ name, email: email || teacher.email || null, nip, school_id:schoolId, status }).eq('id',teacherId);
+      if (teacherUpdate.error) return json({ error:teacherUpdate.error.message },400);
+      const profileUpdate = await admin.from('profiles').update({ role, status, email: email || profile.email, phone, school_id:schoolId }).eq('id',profile.id);
+      if (profileUpdate.error) return json({ error:profileUpdate.error.message },400);
+      const authUpdate = await admin.auth.admin.updateUserById(profile.id, {
+        ...(email ? { email, email_confirm:true } : {}),
+        ...(password ? { password } : {}),
+        user_metadata:{ ...(profile.id ? {} : {}), username:profile.username, teacher_id:teacherId, role }
+      });
+      if (authUpdate.error) return json({ error:authUpdate.error.message },400);
+      return json({ success:true, message:'Data guru, sekolah, role, status, dan kontak berhasil diperbarui.' });
+    }
+
     if (action === 'import_teachers') {
       const rows = Array.isArray(body.rows) ? body.rows : [];
       if (!rows.length) return json({ error: 'Data Excel guru kosong.' }, 400);
